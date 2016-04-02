@@ -202,8 +202,8 @@
     }
 }
 
-.page-heading {
-    font-size: 20px;
+.home {
+    padding: $spacing-unit 0;
 }
 
 .post-list {
@@ -211,20 +211,24 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: $spacing-unit / 1.5;
+	&:not(:last-child) {
+	    border-bottom: 1px solid $grey-color-light;
+	    padding-bottom: $spacing-unit / 2;
+	}
     }
 }
 
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    margin-bottom: $spacing-unit / 2;
 }
 
 .post-link {
-    display: block;
+    display: inline;
     font-size: 24px;
 }
-
 
 
 /**

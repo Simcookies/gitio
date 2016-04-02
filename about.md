@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I am Song, a Student with a programming part-time job, Ruby on Rails Developer, Electronic Enthusiasts from China.
+Living in Japan, and studying at Saitama University.
+I always think I am a fresh man in the area of Computer Science, but I love programming and designing.
+I like the feelings of making some new things, without any other thoughts, just for fun, for truth, for freedom.
+<br><br>
+Feel free to contact me, I like disscussing with others, two will give me more than one.
