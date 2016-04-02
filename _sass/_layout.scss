@@ -5,21 +5,17 @@
     top: 0;
     width: 100%;
     min-height: 56px;
-    margin-bottom: 54px;
-    z-index: 2000;
     background: $bg-header-color;
     
     // Positioning context for the mobile navigation icon
     position: fixed;
-
+    z-index: 2000;
 }
 
 .site-title {
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
     float: left;
 
     &,
@@ -38,7 +34,6 @@
 	-moz-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
-	z-index: 1099;
 	padding: 9px;
 	border-radius: 4px;
 	
@@ -51,7 +46,6 @@
 	    &:before {
 		height: 20px;
 		background-color: #000;
-		z-index: 2;
 	    }
 	}
     }
@@ -198,7 +192,14 @@
  */
 .page-content {
     background: $bg-content-color;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit * 3 0 $spacing-unit 0;
+    
+    .wrapper {
+	position: relative;
+	background: #fafafa;
+	box-shadow: 0 1px 4px #999;
+	outline: 1px solid #ccc;
+    }
 }
 
 .page-heading {
