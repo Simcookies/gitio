@@ -194,16 +194,43 @@
     background: $bg-content-color;
     padding: $spacing-unit * 3 0 $spacing-unit 0;
     
-    .wrapper {
-	position: relative;
-	background: #fafafa;
-	box-shadow: 0 1px 4px #999;
-	outline: 1px solid #ccc;
-    }
 }
 
 .home {
-    padding: $spacing-unit 0;
+    position: relative;
+    width: 710px;
+    float: left;
+    background: #fafafa;
+    box-shadow: 0 1px 4px #999;
+    outline: 1px solid #ccc;
+    padding: $spacing-unit $spacing-unit * 1.5;
+
+    @include media-query($on-laptop) {
+        float: none;
+	width: auto;
+    }
+}
+
+.sidebar {
+    position: relative;
+    float: right;
+    width: 320px;
+    
+    @include media-query($on-laptop) {
+        float: none;
+	width: auto;
+    }
+
+    .col {
+	background: #fafafa;
+	box-shadow: 0 1px 4px #999;
+	outline: 1px solid #ccc;
+	padding: $spacing-unit / 2;
+
+	&:not(:first-child) {
+	    margin-top: $spacing-unit / 2; 
+	}
+    }
 }
 
 .post-list {
