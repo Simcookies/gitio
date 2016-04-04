@@ -1,0 +1,20 @@
+<div class="sidebar">
+  <div class="col">
+    <i class="fa fa-search"></i>&nbsp;<span>Search</span>
+  </div>
+  <div class="col">
+    <i class="fa fa-archive"></i>&nbsp;<span>Categories</span>
+  </div>
+  <div class="col">
+    <h4><i class="fa fa-tags"></i>&nbsp;Tags</h4>
+    {% for tag in site.tags %}
+    <a href="/tag/{{ tag | first | slugify | prepend: site.baseurl }}">
+      <span class="tag-name">{{ tag | first }}</span>
+      <span class="tag-count">{{ tag | last | size }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="col">
+    <i class="fa fa-clipboard"></i>&nbsp;<span>Recent Posts</span>
+  </div>
+</div>

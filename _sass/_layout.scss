@@ -225,10 +225,30 @@
 	background: #fafafa;
 	box-shadow: 0 1px 4px #999;
 	outline: 1px solid #ccc;
-	padding: $spacing-unit / 2;
+	padding: $spacing-unit / 2.5;
 
 	&:not(:first-child) {
 	    margin-top: $spacing-unit / 2; 
+	}
+
+	.tag-name {
+	    font-size: 18px;
+	    color: $txt-light-color;
+	    background: lighten($bg-header-color, 20%);
+	    padding: 0 5px;
+	    border-radius: 5px 0 0 5px;
+	    margin-right: 0;
+	}
+
+	.tag-count {
+	    font-size: 18px;
+	    background: lighten($bg-header-color, 60%);
+	    padding: 0 5px;
+	    border-width: 1px 1px 1px 0;
+	    border-style: solid;
+	    border-color: #111;
+	    border-radius: 0 5px 5px 0;
+	    margin-left: -5px;
 	}
     }
 }

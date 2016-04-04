@@ -10,8 +10,15 @@ layout: default
       <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
       
       <div class="post-meta">
-	<i class="fa fa-calendar"></i>
-	<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<i class="fa fa-calendar"></i>&nbsp;
+	<span>{{ post.date | date: "%b %-d, %Y" }}</span>&nbsp;
+
+	{% if post.tags.size > 0 %}
+	&nbsp;<i class="fa fa-tag"></i>&nbsp;	
+	{% for tag in post.tags %}
+  	<span>{{ tag }}</span>
+	{% endfor %}
+	{% endif %}
       </div>
       
       <div class="post-excerpt">
@@ -24,17 +31,4 @@ layout: default
   
 </div>
 
-<div class="sidebar">
-  <div class="col">
-    <i class="fa fa-search"></i>&nbsp;<span>Search</span>
-  </div>
-  <div class="col">
-    <i class="fa fa-archive"></i>&nbsp;<span>Categories</span>
-  </div>
-  <div class="col">
-    <i class="fa fa-tags"></i>&nbsp;<span>Tags</span>
-  </div>
-  <div class="col">
-    <i class="fa fa-clipboard"></i>&nbsp;<span>Recent Posts</span>
-  </div>
-</div>
+{% include sidebar.html %}
