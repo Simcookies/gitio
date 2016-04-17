@@ -18,3 +18,5 @@ facebook_username: flame804
 
 # Build settings
 markdown: kramdown
+
+destination: ../site
