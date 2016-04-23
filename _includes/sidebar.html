@@ -1,20 +1,45 @@
 <div class="sidebar">
+
+  <!-- Search -->
   <div class="col">
     <i class="fa fa-search"></i>&nbsp;<span>Search</span>
   </div>
+
+  <!-- Categories -->
   <div class="col">
     <i class="fa fa-archive"></i>&nbsp;<span>Categories</span>
+    <div class="context">
+      {% for category in site.categories %}
+      <a href="/category/{{ category | first | slug | prepend: site.baseurl }}">
+	<span class="category-name">{{ category | first }}</span>
+      </a>&nbsp;
+      {% endfor %}
+    </div>
   </div>
+
+  <!-- Tags -->
   <div class="col">
-    <h4><i class="fa fa-tags"></i>&nbsp;Tags</h4>
-    {% for tag in site.tags %}
-    <a href="/tag/{{ tag | first | slugify | prepend: site.baseurl }}">
-      <span class="tag-name">{{ tag | first }}</span>
-      <span class="tag-count">{{ tag | last | size }}</span>
-    </a>
-    {% endfor %}
+    <i class="fa fa-tags"></i>&nbsp;<span>Tags</span>
+    <div class="context">
+      {% for tag in site.tags %}
+      <a href="/tag/{{ tag | first | slugify | prepend: site.baseurl }}">
+	<span class="tag-name">{{ tag | first }}</span>
+	<span class="tag-count">{{ tag | last | size }}</span>
+      </a>&nbsp;
+      {% endfor %}
+    </div>
   </div>
+
+  <!-- Recent Posts-->
   <div class="col">
-    <i class="fa fa-clipboard"></i>&nbsp;<span>Recent Posts</span>
+    <i class="fa fa-clipboard"></i>&nbsp;Recent Posts</span>
+    <div class="context">
+      {% for post in site.posts limit:10 %}
+      <li>
+	<i class="fa fa-link" aria-hidden="true"></i>&nbsp;
+	<a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </div>
   </div>
 </div>
