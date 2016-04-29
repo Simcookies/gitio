@@ -11,7 +11,6 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
       self.data['category'] = category
 
-      category_title_prefix = site.config['category_title_prefix'] || 'Category: '
     end
   end
 

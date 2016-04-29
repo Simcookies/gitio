@@ -9,11 +9,16 @@
   <div class="col">
     <i class="fa fa-archive"></i>&nbsp;<span>Categories</span>
     <div class="context">
-      {% for category in site.categories %}
-      <a href="/category/{{ category | first | slug | prepend: site.baseurl }}">
-	<span class="category-name">{{ category | first }}</span>
-      </a>&nbsp;
-      {% endfor %}
+      <ul class="category-list">
+	{% for category in site.categories %}
+	<li>
+	  <a href="/category/{{ category | first | slug | prepend: site.baseurl }}">
+	    <span class="category_name">{{ category | first }}</span>
+	    <span class="category_count">({{ category | last | size }})</span>
+	  </a>&nbsp;
+	</li>
+	{% endfor %}
+      </ul>
     </div>
   </div>
 
