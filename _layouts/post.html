@@ -24,4 +24,7 @@ layout: default
     {{ content }}
   </div>
 
+  {% unless page.uncomments %}
+    {% include disqus_comment.html %}
+  {% endunless %}
 </article>
