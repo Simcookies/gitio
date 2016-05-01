@@ -13,6 +13,7 @@ facebook_username: flame804
 
 # Build settings
 destination: ../site
+permalink: /:year/:month/:day/:title
 
 # Markdown settings
 highlighter: pygments

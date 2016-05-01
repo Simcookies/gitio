@@ -210,6 +210,11 @@
 	    _position: relative; // for IE
 	}
 	
+	.tag {
+	    display: inline-block;
+	    margin: 1px;
+	}
+	
 	.tag-name {
 	    font-size: 18px;
 	    color: $txt-light-color;

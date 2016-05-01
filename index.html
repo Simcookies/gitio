@@ -16,7 +16,7 @@ layout: default
 	{% if post.tags.size > 0 %}
 	&nbsp;<i class="fa fa-tag"></i>&nbsp;	
 	{% for tag in post.tags %}
-  	<span>{{ tag }}</span>
+  	<span>{{ tag }}</span>&nbsp;
 	{% endfor %}
 	{% endif %}&nbsp;
 
@@ -28,7 +28,7 @@ layout: default
       </div>
       
       <div class="post-excerpt">
-	{{ post.excerpt }}
+	<p>{{ post.excerpt | strip_html }}</p>
 	<span><a href="{{ post.url | prepend: site.baseurl }}">Read More &raquo;</a></span>
       </div>
     </li>
