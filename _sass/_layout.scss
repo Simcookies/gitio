@@ -123,7 +123,24 @@
 .site-footer {
     text-align: center;
     padding: $spacing-unit 0;
-    background: $bg-content-color;    
+    background: $bg-content-color;
+
+    .quick-link {
+	width: 48px;
+	position: fixed;
+	bottom: 8px;
+	right: 1%;
+	font-size: 18px;
+	z-index: 5000;
+
+	a {
+	    color: $bg-header-color;
+
+	    &:hover {
+		color: lighten($bg-header-color, 10%);
+	    }
+	}
+    }
 }
 
 .nav-link {
