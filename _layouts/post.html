@@ -24,6 +24,27 @@ layout: default
     {{ content }}
   </div>
 
+  <hr>
+  
+  <div class="post-nav">
+    {% if page.previous %}
+    <a href="{{ page.previous.url }}" class="left link">
+    {% else %}
+    <a class="left unlink">
+    {% endif %}
+      << Previous
+    </a>
+
+    {% if page.next %}
+    <a href="{{ page.next.url }}" class="right link">
+    {% else %}
+    <a class="right unlink">
+    {% endif %}
+      Next >>
+    </a>
+  </div>
+
+  <hr>
   {% unless page.uncomments %}
     {% include disqus_comment.html %}
   {% endunless %}

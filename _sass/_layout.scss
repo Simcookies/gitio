@@ -343,3 +343,34 @@
 	line-height: 27px;
     }
 }
+
+.post-nav {
+    margin-bottom: 100px;
+    
+    .left,
+    .right {
+	background: $bg-header-color;
+	padding: 6px 10px;
+	border-radius: 5px;
+    }
+    
+    .left {
+	float: left;
+    }
+
+    .right {
+	float: right;
+    }
+
+    .link {
+	color: #eee;
+	
+	&:hover {
+	    background: lighten($bg-header-color, 10%);
+	}	
+    }
+    
+    .unlink {
+	color: darken($bg-header-color, 10%);
+    }
+}
