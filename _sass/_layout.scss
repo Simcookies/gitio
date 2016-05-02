@@ -17,12 +17,26 @@
     font-weight: 300;
     line-height: 56px;
     float: left;
+    padding-left: 10px;
 
     &,
     &:visited {
         color: #fff;
     }
 }
+
+.menu-icon {
+    display: none;
+
+    @include media-query($on-palm) {
+	position: absolute;
+	top: 8px;
+	right: 5px;
+	display: block;
+	color: #fdfdfd;	
+    }
+}    
+
 
 .site-nav {
     float: right;
@@ -36,7 +50,13 @@
 	transition: all 0.2s;
 	padding: 9px;
 	border-radius: 4px;
-	
+        color: $txt-light-color;
+        line-height: $base-line-height;
+
+	&:not(:last-child) {
+	    margin-right: 20px;
+	}
+
 	&:hover{
 	    -webkit-transition: all ease-in 0.1s;
 	    -moz-transition: all ease-in 0.1s;
@@ -49,68 +69,24 @@
 	    }
 	}
     }
-	
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $txt-light-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
+    
 
     @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
+	float: none;
+        background-color: $bg-header-color;
+	
         .trigger {
             clear: both;
             display: none;
-        }
+	    padding: 5px 10px;
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-	    color: $txt-dark-color;
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
+	    .page-link {
+		display: block;
+		text-align: center;
+		margin: 0;
+		border-top: 1px solid darken($bg-header-color,10%);
+		border-radius: 0;
+	    }
         }
     }
 }
@@ -125,6 +101,10 @@
     padding: $spacing-unit 0;
     background: $bg-content-color;
 
+    @include media-query($on-palm) {
+	background: #fafafa;
+    }
+    
     .quick-link {
 	width: 48px;
 	position: fixed;
@@ -157,7 +137,10 @@
 .page-content {
     background: $bg-content-color;
     padding: $spacing-unit * 3 0 $spacing-unit 0;
-    
+
+    @include media-query($on-palm) {
+	padding: 55px 0 0 0;
+    }
 }
 
 .home {
@@ -173,6 +156,7 @@
     @include media-query($on-laptop) {
         float: none;
 	width: auto;
+	padding: $spacing-unit;
     }
 
     .category-title {
@@ -204,6 +188,22 @@
 	    margin-top: $spacing-unit / 2; 
 	}
 
+	@include media-query($on-laptop) {
+	    margin-top: 0 !important;
+	    outline: none;
+	}
+	
+	@include media-query($on-palm) {
+	    box-shadow: none;
+	    margin-top: 0 !important;
+	    outline: none;
+	    border-top: 2px dotted #ccc;
+	    
+	    &:last-child {
+		border-bottom: 2px dotted #ccc;
+	    }
+	}
+	
 	.category-list {
 	    margin-left: 0;
 	    list-style: none;
@@ -295,7 +295,16 @@
     background: #fafafa;
     box-shadow: 0 1px 4px #999;
     outline: 1px solid #ccc;
-    padding: $spacing-unit $spacing-unit * 1.5;    
+    padding: $spacing-unit $spacing-unit * 1.5;
+
+    @include media-query($on-laptop) {
+	padding: $spacing-unit / 1.5;
+    }
+
+    @include media-query($on-palm) {
+	box-shadow: none;
+	outline: none;
+    }
 }
 
 .post-header {

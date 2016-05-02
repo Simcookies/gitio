@@ -1,4 +1,6 @@
 jQuery(document).ready(function() {
+
+    // quick button
     var topBtn = jQuery('#quick-link');
     topBtn.hide();
     jQuery(window).scroll(function () {
@@ -13,5 +15,21 @@ jQuery(document).ready(function() {
 	    scrollTop: 0
 	}, 300);
 	return false;
+    });
+
+    // menu-icon button
+    var menuBtn = jQuery('#menu-icon');
+    var toggleMenu = menuBtn.next('nav').children('.trigger');
+    menuBtn.click(function() {
+	toggleMenu.toggle('fast');
+	return false;
+    });
+
+    jQuery(document).click(function() {
+	toggleMenu.hide('fast');
+    });
+
+    toggleMenu.click(function(e) {
+	e.stopPropagation();
     });
 });
