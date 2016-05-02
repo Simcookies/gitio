@@ -162,13 +162,18 @@
     }
 
     .category-title {
-	color: lighten($bg-header-color, 20%);
+	color: lighten($bg-header-color, 8%);
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 3px;
     }
 }
+
+
+/*
+** Sidebar
+*/
 
 .sidebar {
     position: relative;
@@ -383,5 +388,90 @@
     
     .unlink {
 	color: darken($bg-header-color, 10%);
+    }
+}
+
+
+
+/**
+ * Time Archive
+ */
+.post-time {
+    border: none;
+    margin: 0;
+    padding: 30px 10px 10px 10px;
+
+    @include media-query($on-palm) {
+	padding: 2px;
+    }
+    
+    tr {
+	background-color: #fafafa !important;
+	height: auto;
+	
+	td {
+	    border: none;
+	}
+    }
+}
+
+.archive-date {
+    width: 20%;    
+    padding: 0;
+    text-align: center;
+    
+    @include media-query($on-palm) {
+	text-align: left;
+    }
+    
+    .date-area {
+	min-width: 88px;
+    }
+    .date-month {
+	color: #fafafa;
+	background: lighten($bg-header-color, 10%);
+	line-height: 25px;
+	padding: 10px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	
+	@include media-query($on-palm) {
+	    padding: 5px;
+	    line-height: 18px;
+	}	
+    }
+
+    .date-year {
+	border-color: lighten($bg-header-color, 10%);
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: 8px;
+	border-style: solid;
+	border-width: 2px;
+	margin-left: -5px;
+
+	@include media-query($on-palm) {
+	    padding: 3px;
+	}
+    }
+}
+
+.scope {
+    border-left: 2px solid lighten($bg-header-color, 10%) !important;
+}
+
+.scope-right {
+    border-bottom: 2px solid lighten($bg-header-color, 10%) !important;
+    border-bottom-right-radius: 8px;
+}
+
+.scope-left {
+    border-bottom: 4px solid lighten($bg-header-color, 10%) !important;
+    border-bottom-left-radius: 8px;    
+}
+
+.post-date {
+    .time-info {
+	color: #bbb;
     }
 }
