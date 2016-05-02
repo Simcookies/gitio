@@ -25,11 +25,13 @@ jQuery(document).ready(function() {
 	return false;
     });
 
-    jQuery(document).click(function() {
-	toggleMenu.hide('fast');
-    });
+    if(menuBtn.css('display') == "block") {
+	jQuery(document).click(function() {
+	    toggleMenu.hide('fast');
+	});
 
-    toggleMenu.click(function(e) {
-	e.stopPropagation();
-    });
+	toggleMenu.click(function(e) {
+	    e.stopPropagation();
+	});
+    }
 });
