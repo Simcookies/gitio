@@ -9,7 +9,6 @@ url: "http://simcookies.github.io" # the base hostname & protocol for site
 # Social info
 twitter_username:  moshui804
 github_username:   Simcookies
-facebook_username: flame804
 
 # Build settings
 destination: ../site
