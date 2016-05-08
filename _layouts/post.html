@@ -8,14 +8,14 @@ layout: default
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.tags.size > 0 %}
-      &nbsp;<i class="fa fa-tag"></i>&nbsp;
+      &nbsp;<i class="fa fa-tag"></i>
       {% for tag in page.tags %}
-      <span><a href="/tag/{{ tag }}">{{ tag }}</a></span>
+      <span><a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a></span>
       {% endfor %}
-      {% endif %}&nbsp;
+      {% endif %}
       {% if page.category %}
       &nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
-      <span><a href="/category/{{ page.category }}">{{ page.category }}</a></span>
+      <span><a class="category-div" href="/category/{{ page.category }}">{{ page.category }}</a></span>
       {% endif %}
     </p>
   </header>

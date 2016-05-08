@@ -210,6 +210,18 @@
 		border-bottom: 2px dotted #ccc;
 	    }
 	}
+
+	.search {
+	    width: 100%;
+	    font-size: 16px;
+	    background-image:url('/public/image/searchicon.png');
+	    background-color: #fafafa;
+	    background-position: 8px 9px;
+	    background-repeat: no-repeat;
+	    border: none;
+	    padding: 8px 8px 8px 30px;
+	    box-sizing: border-box;
+	}
 	
 	.category-list {
 	    margin-left: 0;
@@ -286,6 +298,17 @@
     font-size: $small-font-size;
     color: $grey-color;
     margin-bottom: $spacing-unit / 2;
+
+    .tag-div {
+	color: #fff;
+	background-color: lighten($bg-header-color, 40%);
+	border-radius: 4px;
+	padding: 2px 6px;
+    }
+
+    .category-div {
+	text-transform: capitalize;
+    }
 }
 
 .post-link {

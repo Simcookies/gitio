@@ -14,15 +14,15 @@ layout: default
 	<span>{{ post.date | date: "%b %-d, %Y" }}</span>&nbsp;
 
 	{% if post.tags.size > 0 %}
-	&nbsp;<i class="fa fa-tag"></i>&nbsp;	
+	&nbsp;<i class="fa fa-tag"></i>	
 	{% for tag in post.tags %}
-  	<span>{{ tag }}</span>&nbsp;
+  	<span class="tag-div">{{ tag }}</span>
 	{% endfor %}
-	{% endif %}&nbsp;
+	{% endif %}
 
 	{% if post.category %}
 	&nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
-	<span>{{ post.category }}</span>
+	<span class="category-div">{{ post.category }}</span>
 	{% endif %}
 
       </div>
