@@ -8,9 +8,9 @@ layout: default
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.tags.size > 0 %}
-      &nbsp;<i class="fa fa-tag"></i>
+      &nbsp;<i class="fa fa-tag"></i>&nbsp;
       {% for tag in page.tags %}
-      <span><a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a></span>
+      <a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
       {% endfor %}
       {% endif %}
       {% if page.category %}

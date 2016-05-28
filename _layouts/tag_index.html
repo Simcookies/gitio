@@ -17,9 +17,9 @@ layout: default
 	    {% if post.tags.size > 0 %}
 	    &nbsp;<i class="fa fa-tag"></i>&nbsp;	
 	    {% for tag in post.tags %}
-  	    <span class="tag-div">{{ tag }}</span>&nbsp;
+  	    <a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
 	    {% endfor %}
-	    {% endif %}&nbsp;
+	    {% endif %}
 
 	    {% if post.category %}
 	    &nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;

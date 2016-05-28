@@ -14,9 +14,9 @@ layout: default
 	<span>{{ post.date | date: "%b %-d, %Y" }}</span>&nbsp;
 
 	{% if post.tags.size > 0 %}
-	&nbsp;<i class="fa fa-tag"></i>	
+	&nbsp;<i class="fa fa-tag"></i>&nbsp;
 	{% for tag in post.tags %}
-  	<span class="tag-div">{{ tag }}</span>
+  	<a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
 	{% endfor %}
 	{% endif %}
 
