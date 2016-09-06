@@ -130,6 +130,8 @@ Errors will be showed when we start server. So itt's better to spectify version.
 
 Finally, ```rails server``` can start server at localhost:4000, you can input this address in browser and check the main page. Here we go with Rails 4!
 
+------------------
+
 ## Surmmary
 
 The versions of deferent parts and install order are very important, here I made a flow figure:
@@ -137,6 +139,8 @@ The versions of deferent parts and install order are very important, here I made
 <strong>install RVM --> use RVM install Ruby and gem --> use gem install bundle and Rails --> make project</strong>
 
 This post was writed to help new rails developer with deeper understanding about so many concepts. Also it helps me not to forget the install process. After them, enjoy developing in Rails!
+
+---------------------
 
 ## References
 
