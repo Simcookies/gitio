@@ -13,10 +13,7 @@ github_username:   Simcookies
 # Build settings
 gems: [jekyll-paginate]
 destination: ../site
-
-# can not use permalink because it will disable panigate.
-# permalink: /:year/:month/:day/:title
-
+permalink: /:year/:month/:day/:title
 paginate: 15
 paginate_path: "page:num"
 
