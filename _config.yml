@@ -7,7 +7,7 @@ baseurl: "" # the subpath of site
 url: "http://simcookies.github.io" # the base hostname & protocol for site
 
 # Social info
-twitter_username:  moshui804
+twitter_username:  Simcookies
 github_username:   Simcookies
 
 # Build settings
