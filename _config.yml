@@ -11,8 +11,14 @@ twitter_username:  Simcookies
 github_username:   Simcookies
 
 # Build settings
+gems: [jekyll-paginate]
 destination: ../site
-permalink: /:year/:month/:day/:title
+
+# can not use permalink because it will disable panigate.
+# permalink: /:year/:month/:day/:title
+
+paginate: 15
+paginate_path: "page:num"
 
 # Markdown settings
 highlighter: pygments
