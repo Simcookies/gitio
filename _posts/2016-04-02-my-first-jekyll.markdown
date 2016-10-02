@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "My first post"
 date:   2016-04-02 19:35:16 +0900
 category: update

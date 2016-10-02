@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Fix Nvidia bug in Ubuntu 16.04"
 category: Solution
 tags: Linux Ubuntu

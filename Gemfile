@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 gem "jekyll", "3.2.1"
-gem "jekyll-paginate"
-gem "redcarpet"
-gem "pygments.rb"
 gem "rake"
+
+group :jekyll_plugin do
+  gem "jekyll-paginate"
+  gem "redcarpet"
+  gem "jekyll-sitemap"
+end

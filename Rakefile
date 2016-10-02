@@ -4,7 +4,7 @@ require 'time'
 desc "Create a new post"
 task :post do
   unless FileTest.directory?('./_posts')
-    abort("rake aborted: '_posts direcroty not found.'")
+    abort("rake aborted: '_posts' direcroty not found.")
   end
   title = ENV["title"] || "new-post"
   slug = title.downcase.strip.gsub(' ','-').gsub(/[^\w-]/, '')
@@ -25,9 +25,30 @@ task :post do
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
-    post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/, ' ')}\""
     post.puts "date: #{datetime}"
+    post.puts "category:"
+    post.puts "tags:"
+    post.puts "---"
+  end
+end
+
+desc "Create a new draft"
+task :draft do
+  unless File.directory?('./_drafts')
+    abort("rake aborted: '_drafts' directory not found.")
+  end
+  title = ENV["title"] || "new-draft"
+  slug = title.downcase.strip.gsub(' ','-').gsub(/[^\w-]/, '')
+  filename = File.join('.', '_drafts', "#{slug}.md")
+  if File.exist?(filename)
+    abort("rake aborted: #{filename} already exists.")
+  end
+
+  puts "Creating new draft: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "title: \"#{title.gsub(/-/, ' ')}\""
     post.puts "category:"
     post.puts "tags:"
     post.puts "---"

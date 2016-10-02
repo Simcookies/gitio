@@ -7,6 +7,16 @@ baseurl: "" # the subpath of site
 url: "http://simcookies.github.io" # the base hostname & protocol for site
 exclude: ["Gemfile", "Gemfile.lock", "Rakefile"]
 
+# default setting
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+
 # Social info
 twitter_username:  Simcookies
 github_username:   Simcookies
@@ -19,7 +29,6 @@ paginate: 15
 paginate_path: "page:num"
 
 # Markdown settings
-highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extensions:

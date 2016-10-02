@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Begin with Rails"
 category: Basics
 tags: Rails

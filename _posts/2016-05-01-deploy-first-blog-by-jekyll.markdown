@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Post blogs with Jekyll"
 category: Blog
 tags: jekyll markdown
