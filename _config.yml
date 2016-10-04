@@ -25,15 +25,11 @@ github_username:   Simcookies
 gems: [jekyll-paginate]
 destination: ../site
 permalink: /:year/:month/:day/:title
-paginate: 15
+paginate: 10
 paginate_path: "page:num"
 
 # Markdown settings
-markdown: redcarpet
-redcarpet:
-  extensions:
-      - fenced_code_blocks
-      - no_intra_emphasis
-      - strikethrough
-      - autolink
-      - tables
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
