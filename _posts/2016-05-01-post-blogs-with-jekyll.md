@@ -114,13 +114,40 @@ It will turned into real HTML context:
 For more information about Liquid language, you can check [Jekyll offical docs site](https://jekyllrb.com/docs/home/).
 The point is, whenever you modify the _config.yml, server needs to be restarted again or `_site` needs to be rebuild.
 
-----------
+-------------------------------------------------------------------------------
 
-# Use Markdown
+## Write Post
 
-Jekyll normally supports two markdown renderers: `Redcarpet` and `Kramdown`, we can also make our own markdown processors, but it's not easy for me. In my blog project, I used `Redcarpet`. So I make configuration like here:
+After some basic setting, you can write your own blog now. You can use any editor to write blog at the path of `_post`, at the same time, Jekyll server can keep watch over your post and refresh the web page. Here is the point you should be care about:
+
+  * The extension of post file should be `.markdown`,`.md`(and so on, I use `.md`).
+  * Post filename should be write like: `YYYY-MM-DD-your-blog-name.md`
+
+Open one post, write below code at first of file:
+
+{% raw %}
+```markdown
+---
+title: "Your blog title"
+date:   2016-03-21 15:35:16 +0900
+category: Blog
+tag: Test
+---
+```
+{% endraw %}
+
+Go on write something you want after these code. These code are provided to Jekyll for explaining some info of post. Index page can use ttile variable to show posts order by date variable, and also we can sort out posts with category and tag variables. Well, you can find more information about how to use these varibale at [offical page](https://jekyllrb.com/docs/home/) or I will post new blog about it, you can subscribe it.
+
+-------------------------------------------------------------------------------
+
+## Use Markdown
+
+Why we use Jekyll to write blog is beacuse we do not need to focus on HTML pages every time, just concentrate on writting. And with Markdwon, this process will be more easy and happy. 
+
+[Markdown](https://en.wikipedia.org/wiki/Markdown) is a lightweight markup language with plain text. We just write some text, and Markdown processers help us to translate it into beautiful HTML pages. Jekyll normally supports two markdown renderers: `Redcarpet` and `Kramdown`, even we can also make our own markdown processors. In my blog project, I used `Redcarpet`. So I make configuration like here:
 
 ```ruby
+# Here are write at _config.yml
 markdown: redcarpet
 redcarpet:
   extensions:
@@ -137,6 +164,8 @@ The extensions are used normally:
 * `strikethrough`: Parse strikethrough, PHP-Markdown style. Two `~` characters mark the start of a strikethrough. Such as ~~Text~~.
 * `autolink`: Parse links even when they are not enclosed in <> characters. Autolinks for the http, https and ftp protocols will be automatically detected.
 * `tables`: Parse tables.
+
+There are some basic syntax rules, please have a look at [Github Guide](https://guides.github.com/features/mastering-markdown/).
 
 ----------
 
