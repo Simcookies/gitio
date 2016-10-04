@@ -31,5 +31,6 @@ paginate_path: "page:num"
 # Markdown settings
 markdown: kramdown
 kramdown:
-    input: GFM
+  input: GFM
+
 highlighter: rouge

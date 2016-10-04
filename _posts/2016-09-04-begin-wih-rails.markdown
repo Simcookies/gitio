@@ -144,7 +144,7 @@ This post was writed to help new rails developer with deeper understanding about
 
 ## References
 
-> * Offical RVM page: https://rvm.io/
-> * Chinese install guide book: https://ruby-china.org/wiki/rvm-guide
-> * Offical Rails guide book: http://guides.rubyonrails.org/
-> * How to solve the problem with "RVM is not a function": http://stackoverflow.com/questions/9336596/rvm-installation-not-working-rvm-is-not-a-function
+> * Offical RVM page: <https://rvm.io/>
+> * Chinese install guide book: <https://ruby-china.org/wiki/rvm-guide>
+> * Offical Rails guide book: <http://guides.rubyonrails.org/>
+> * How to solve the problem with "RVM is not a function": <http://stackoverflow.com/questions/9336596/rvm-installation-not-working-rvm-is-not-a-function>
