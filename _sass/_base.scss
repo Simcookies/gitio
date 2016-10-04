@@ -118,9 +118,9 @@ a {
  */
 blockquote {
     border-left: 10px solid #D6DBDF;
-    padding: $spacing-unit / 2;
+    padding: 0 1em;
     font-size: 18px;
-    color: #888;
+    color: #777;
 
     > :last-child {
         margin-bottom: 0;
@@ -136,7 +136,7 @@ pre,
 code {
     font-family: Monaco, Consolas, "Courier New";
     font-size: 15px;
-    border: 1px solid $tc-border-color;
+    border: 1px solid $tc-basic-color;
 }
 
 code {

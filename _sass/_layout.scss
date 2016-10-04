@@ -33,7 +33,7 @@
 	top: 8px;
 	right: 5px;
 	display: block;
-	color: #fdfdfd;	
+	color: #fff;	
     }
 }    
 
@@ -103,7 +103,7 @@
     background: $bg-content-color;
 
     @include media-query($on-palm) {
-	background: #fafafa;
+	background: #fff;
     }
     
     .quick-link {
@@ -140,7 +140,7 @@
     padding: $spacing-unit * 3 0 $spacing-unit 0;
 
     @include media-query($on-palm) {
-	background: #fafafa;
+	background: #fff;
 	padding: 55px 0 0 0;
     }
 }
@@ -150,7 +150,7 @@
     width: 710px;
     min-height: 400px;
     float: left;
-    background: #fafafa;
+    background: #fff;
     box-shadow: 0 1px 4px #999;
     outline: 1px solid #ccc;
     padding: $spacing-unit $spacing-unit * 1.5;
@@ -186,7 +186,7 @@
     }
 
     .col {
-	background: #fafafa;
+	background: #fff;
 	box-shadow: 0 1px 4px #999;
 	outline: 1px solid #ccc;
 	padding: $spacing-unit / 2.5;
@@ -215,7 +215,7 @@
 	    width: 100%;
 	    font-size: 16px;
 	    background-image:url('/public/image/searchicon.png');
-	    background-color: #fafafa;
+	    background-color: #fff;
 	    background-position: 8px 9px;
 	    background-repeat: no-repeat;
 	    border: none;
@@ -263,7 +263,7 @@
 
 	.tag-count {
 	    font-size: 16px;
-	    background: lighten($bg-header-color, 60%);
+	    background: #fff;
 	    padding: 1px 5px;
 	    border-width: 1px 1px 1px 0;
 	    border-style: solid;
@@ -324,7 +324,7 @@
 .post {
     position: relative;
     min-height: 400px;
-    background: #fafafa;
+    background: #fff;
     box-shadow: 0 1px 4px #999;
     outline: 1px solid #ccc;
     padding: $spacing-unit $spacing-unit * 1.5;
@@ -431,7 +431,7 @@
     }
     
     tr {
-	background-color: #fafafa !important;
+	background-color: #fff !important;
 	height: auto;
 	
 	td {
@@ -453,7 +453,7 @@
 	min-width: 88px;
     }
     .date-month {
-	color: #fafafa;
+	color: #fff;
 	background: lighten($bg-header-color, 10%);
 	line-height: 25px;
 	padding: 10px;

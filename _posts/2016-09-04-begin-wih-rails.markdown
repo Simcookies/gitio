@@ -8,6 +8,7 @@ For a new developer of Rails, it may be a quite problem to distinguish the conce
 
 
 ## Basic Concepts
+
 |Name|Description|
 |----|-----------|
 |Ruby|The name of programming language.|
