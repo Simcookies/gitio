@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Begin with Rails</title>
+  <meta name="description" content="For a new developer of Rails, it may be a quite problem to distinguish the concepts of Ruby, Rails, rvm, gem, bundle and rake. So I want post this blog to su...">
+
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://simcookies.github.io/2016/09/04/begin-wih-rails">
+  <link rel="alternate" type="application/rss+xml" title="Simcookies" href="http://simcookies.github.io/feed.xml">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="/public/script/main.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">  
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Simcookies</a>
+
+    <span class="menu-icon" id="menu-icon">
+      <span class="fa-stack fa-lg">
+	<i class="fa fa-square-o fa-stack-2x"></i>
+	<i class="fa fa-bars fa-stack-1x"></i>
+      </span>
+    </span>
+    
+    <nav class="site-nav">
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+	  
+	  <a class="page-link" href="/feed.xml">Feeds</a>
+	  <a class="page-link" href="https://github.com/Simcookies/gitio" target="_blank">
+	    <i class="fa fa-github-alt fa-lg"></i>
+	    Repositories
+	  </a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Begin with Rails</h1>
+    <p class="post-meta">
+      <time datetime="2016-09-04T00:00:00+09:00" itemprop="datePublished">Sep 4, 2016</time>
+      
+      &nbsp;<i class="fa fa-tag"></i>&nbsp;
+      
+      <a class="tag-div" href="/tag/Rails">Rails</a>&nbsp;
+      
+      
+      
+      &nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
+      <span><a class="category-div" href="/category/Basics">Basics</a></span>
+      
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>For a new developer of Rails, it may be a quite problem to distinguish the concepts of Ruby, Rails, rvm, gem, bundle and rake. So I want post this blog to summarize them, also summarize the steps to install Rails 4 on Linux Ubuntu 16.04.</p>
+
+<h2 id="basic-concepts">Basic Concepts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ruby</td>
+      <td>The name of programming language.</td>
+    </tr>
+    <tr>
+      <td>Rails</td>
+      <td>The web develop framework mainly used ruby.</td>
+    </tr>
+    <tr>
+      <td>RVM</td>
+      <td>RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.</td>
+    </tr>
+    <tr>
+      <td>RubyGems</td>
+      <td>A package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a “gem”).</td>
+    </tr>
+    <tr>
+      <td>gem</td>
+      <td>A self-contained RubyGem format, you can use it directly as command-line.</td>
+    </tr>
+    <tr>
+      <td>bundle</td>
+      <td>A kind of instance of gem, it provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed. It always binded with file named “Gemfile”.</td>
+    </tr>
+    <tr>
+      <td>Gemfile</td>
+      <td>Binded with bundle like <code class="highlighter-rouge">bundle install</code>.</td>
+    </tr>
+    <tr>
+      <td>Rake</td>
+      <td>A simple ruby build program with capabilities similar to make.</td>
+    </tr>
+    <tr>
+      <td>Rakefile</td>
+      <td>Rake’s version of Makefiles</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="install-rails-4">Install Rails 4</h2>
+
+<h3 id="test-os">Test OS</h3>
+
+<blockquote>
+  <p>Linux – Ubuntu 16.04</p>
+</blockquote>
+
+<h3 id="install-rvm">Install RVM</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+~ $ \curl -sSL https://get.rvm.io | bash -s stable
+</code></pre>
+</div>
+
+<p>After installing, you can use <code class="highlighter-rouge">rvm -v</code> to check version of RVM you installed. Like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ rvm -v
+rvm 1.27.0 (latest) by Wayne E. Seguin &lt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;mpapis@gmail.com&gt; [https://rvm.io/]
+</code></pre>
+</div>
+
+<h3 id="install-ruby-with-rvm">Install Ruby with RVM</h3>
+
+<p>If you installed RVM successfully, you can use it to install RVM now. Firstly, you can use <code class="highlighter-rouge">rvm list known</code> to list all versions you can install, and choose from them.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ rvm requirements # If without the step, it also included in next step.
+~ $ rvm install 2.2.2 # Here you can decide which version by yourself.
+</code></pre>
+</div>
+
+<p>Here it may be take a bit long time because of downloading and complile. This installing also includes RubyGems. After it, you can use <code class="highlighter-rouge">rvm list</code> to list all the versions you have installed. Like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ rvm list
+
+rvm rubies
+
+ * ruby-2.2.2 [ x86_64 ]
+ 
+ # =&gt; - current
+ # =* - current &amp;&amp; default
+ #  * - default
+</code></pre>
+</div>
+
+<p>Use <code class="highlighter-rouge">rvm use 2.2.2</code> to set version of current ruby. And <code class="highlighter-rouge">rvm use 2.2.2 --default</code> can set default version and you can use that version of ruby after openning console without setting version every time.</p>
+
+<p>However, when I installed rvm and use it firstly, it give me an error like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ rvm use 2.2.2 --default
+
+RVM is not a function, selecting rubies with 'rvm use ...' will not work.
+
+You need to change your terminal emulator preferences to allow login shell.
+Sometimes it is required to use `/bin/bash --login` as the command.
+Please visit https://rvm.io/integration/gnome-terminal/ for an example.
+
+</code></pre>
+</div>
+
+<p>Why showed this error? Because when we install rvm, it will add RVM path and RVM loading line to ~/.profile:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function* 
+</code></pre>
+</div>
+<p>But we the console which we openned is always non-login bash, it will not load the .profile. Here I give my solution:</p>
+
+<blockquote>
+  <p>Move the loading line to .bashrc file</p>
+</blockquote>
+
+<p>If we use non-login bash, it will load .bashrc, if we use login-bash, it will load .profile, and load .bashrc through:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+</code></pre>
+</div>
+
+<p>After this, I think it will be OK. Finally, use <code class="highlighter-rouge">gem -v</code> to check version of Gemfile.</p>
+
+<h3 id="install-bundler-and-rails-4">Install Bundler and Rails 4</h3>
+
+<p><code class="highlighter-rouge">gem install bundle</code> to install bundler.</p>
+
+<p><code class="highlighter-rouge">gem install rails --version=4.2.7.1</code> Use <code class="highlighter-rouge">--version</code> option to install specific rails.</p>
+
+<h3 id="test-installing">Test Installing</h3>
+
+<p>According the offical documentation <code class="highlighter-rouge">rails new blog</code> to make new rails project. But it will bundle install the lastest Rails and related gems automaticly, so we have to specify the version of rails which we want, like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ rails _4.2.7.1_ new blog
+</code></pre>
+</div>
+
+<p>This is quite important point, because the gems depend with each other. When I firstly rails new a project, I use <code class="highlighter-rouge">rails new blog</code> directly, and just it generates a file named Gemfile, I just modify the version of rails in it:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Bundle edge Rails instead: gem 'rails', github: 'rails/rails'</span>
+<span class="n">gem</span> <span class="s1">'rails'</span><span class="p">,</span> <span class="s1">'4.2.7.1'</span>
+</code></pre>
+</div>
+
+<p>Errors will be showed when we start server. So itt’s better to spectify version.</p>
+
+<p>Finally, <code class="highlighter-rouge">rails server</code> can start server at localhost:4000, you can input this address in browser and check the main page. Here we go with Rails 4!</p>
+
+<hr />
+
+<h2 id="surmmary">Surmmary</h2>
+
+<p>The versions of deferent parts and install order are very important, here I made a flow figure:</p>
+
+<p><strong>install RVM –&gt; use RVM install Ruby and gem –&gt; use gem install bundle and Rails –&gt; make project</strong></p>
+
+<p>This post was writed to help new rails developer with deeper understanding about so many concepts. Also it helps me not to forget the install process. After them, enjoy developing in Rails!</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<blockquote>
+  <ul>
+    <li>Offical RVM page: <a href="https://rvm.io/">https://rvm.io/</a></li>
+    <li>Chinese install guide book: <a href="https://ruby-china.org/wiki/rvm-guide">https://ruby-china.org/wiki/rvm-guide</a></li>
+    <li>Offical Rails guide book: <a href="http://guides.rubyonrails.org/">http://guides.rubyonrails.org/</a></li>
+    <li>How to solve the problem with “RVM is not a function”: <a href="http://stackoverflow.com/questions/9336596/rvm-installation-not-working-rvm-is-not-a-function">http://stackoverflow.com/questions/9336596/rvm-installation-not-working-rvm-is-not-a-function</a></li>
+  </ul>
+</blockquote>
+
+  </div>
+
+  <hr>
+
+  <div class="post-nav">
+    
+    <a href="/2016/05/01/post-blogs-with-jekyll" class="left link">
+    
+      << Previous
+    </a>
+
+    
+    <a href="/2016/09/27/fix-nviada-bug-ubuntu" class="right link">
+    
+      Next >>
+    </a>
+  </div>
+
+  <hr>
+  
+    <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() {  // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//simcookiesgithubio.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  &copy;&nbsp;2016 by Simcookies with Jekyll 3.2.1. All rights reserved.
+  <div class="quick-link" id="quick-link">
+    <a id="page-top">
+      <span class="fa-stack fa-lg">
+	<i class="fa fa-square fa-stack-2x"></i>
+	<i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    <a href="/">
+      <span class="fa-stack fa-lg">
+	<i class="fa fa-square fa-stack-2x"></i>
+	<i class="fa fa-home fa-stack-1x fa-inverse"></i>
+      </span>      
+    </a>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

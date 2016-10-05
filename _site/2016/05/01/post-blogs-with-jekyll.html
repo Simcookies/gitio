@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Post blogs with Jekyll</title>
+  <meta name="description" content="Jekyll is a tool can transform plain text into static websites and blog. It’s a open source project on Github. In this blog, I will talk about how to install...">
+
+  <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://simcookies.github.io/2016/05/01/post-blogs-with-jekyll">
+  <link rel="alternate" type="application/rss+xml" title="Simcookies" href="http://simcookies.github.io/feed.xml">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="/public/script/main.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">  
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Simcookies</a>
+
+    <span class="menu-icon" id="menu-icon">
+      <span class="fa-stack fa-lg">
+	<i class="fa fa-square-o fa-stack-2x"></i>
+	<i class="fa fa-bars fa-stack-1x"></i>
+      </span>
+    </span>
+    
+    <nav class="site-nav">
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+	  
+	  <a class="page-link" href="/feed.xml">Feeds</a>
+	  <a class="page-link" href="https://github.com/Simcookies/gitio" target="_blank">
+	    <i class="fa fa-github-alt fa-lg"></i>
+	    Repositories
+	  </a>
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Post blogs with Jekyll</h1>
+    <p class="post-meta">
+      <time datetime="2016-05-01T00:00:00+09:00" itemprop="datePublished">May 1, 2016</time>
+      
+      &nbsp;<i class="fa fa-tag"></i>&nbsp;
+      
+      <a class="tag-div" href="/tag/jekyll">jekyll</a>&nbsp;
+      
+      <a class="tag-div" href="/tag/markdown">markdown</a>&nbsp;
+      
+      
+      
+      &nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
+      <span><a class="category-div" href="/category/Blog">Blog</a></span>
+      
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Jekyll is a tool can transform plain text into static websites and blog. It’s a open source project on <a href="https://github.com/jekyll/jekyll">Github</a>. In this blog, I will talk about how to install Jekyll and use it to generate our static blogs.</p>
+
+<h2 id="install-jekyll">Install jekyll</h2>
+
+<p>Jekyll writed by Ruby, they pack up it as a gem, so we can use RubyGems to install it. Use command like these:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~ $ gem install jekyll
+~ $ jekyll new your_site_dir
+~ $ cd your_site_dir
+~/your_site_dir $ jekyll serve
+</code></pre>
+</div>
+
+<p>And then check the localhost at port 4000 as inputing localhost:4000 at address column of browser. We will see the standard blog pages. Here we use <code class="highlighter-rouge">jekyll serve</code>, it will build the project and make a server at port 4000, we can also use <code class="highlighter-rouge">jekyll build --destrination &lt;destrination&gt;</code> to specify build path directly. Here you can repalce <code class="highlighter-rouge">&lt;destrination&gt;</code> to directory which you want to build. The default path is <code class="highlighter-rouge">./_site</code>.</p>
+
+<p>As time goes, the project will need another gems, so we can make a Gemfile to collect the gems together at root path. Here is context of Gemfile:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Gemfile</span>
+<span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+<span class="n">gem</span> <span class="s2">"jekyll"</span><span class="p">,</span> <span class="s2">"3.2.1"</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>After making Gemfile, we can use <code class="highlighter-rouge">bundle install</code> to install all gems we need, if we want to add some other gems, we can add into Gemfile, and run <code class="highlighter-rouge">bundle install</code> again.</p>
+
+<hr />
+
+<h2 id="directory">Directory</h2>
+
+<p>Because the website is static, we can modify it by CSS/HTML and JavaScript. Let’s check the directory firstly:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>your_site_root_dir/
+|-- README.md
+|-- _config.yml
+|-- Gemfile
+|-- _include/
+|   |-- head.html
+|   |-- header.html
+|   |-- footer.html
+|-- _layouts/
+|   |-- default.html
+|   |-- page.html
+|   |-- post.html
+|-- _plugins/
+|-- _posts/
+|-- _sass/
+|   |-- _base.scss
+|   |-- _layout.scss
+|   |-- _syntax-highlighting.scss
+|-- about.md
+|-- css/
+|   |-- main.scss
+|-- feed.xml
+|-- index.html
+</code></pre>
+</div>
+<p>Here I made a table to give detials about them:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File/Directory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>_config.yml</td>
+      <td>Stores configuration data. And it also can store global variables.</td>
+    </tr>
+    <tr>
+      <td>Gemfile</td>
+      <td>I made it by myself (The lastest version Jekyll will make it for you)</td>
+    </tr>
+    <tr>
+      <td>_include</td>
+      <td>These are the partials that can be mixed and matched by layouts and posts to facilitate reuse.</td>
+    </tr>
+    <tr>
+      <td>_layouts</td>
+      <td>These are the templates that wrap posts.</td>
+    </tr>
+    <tr>
+      <td>_post</td>
+      <td>Our post with markdown format</td>
+    </tr>
+    <tr>
+      <td>_site</td>
+      <td>The normal bulid directory, but I change it other place.</td>
+    </tr>
+    <tr>
+      <td>index.html and other HTML, Markdown files</td>
+      <td>These will be build directly to the build root directory.</td>
+    </tr>
+    <tr>
+      <td>other file or floder</td>
+      <td>These will also be build and included to root directory, such as css or script.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Almost all of configurations and global variables are stored in _config.yml. The format of configuration should be like <code class="highlighter-rouge">option: value</code> or <code class="highlighter-rouge">variable: value</code>. For example, normally , we need config the site info, just do like this:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Site settings</span>
+<span class="ss">title: </span><span class="n">your</span> <span class="n">blog</span> <span class="n">title</span>
+<span class="ss">email: </span><span class="n">your</span> <span class="n">email</span>
+<span class="ss">description: </span><span class="n">you</span> <span class="n">can</span> <span class="n">descripe</span> <span class="n">your</span> <span class="n">blog</span> <span class="n">here</span><span class="o">.</span>
+
+<span class="c1"># Social info if you want</span>
+<span class="ss">twitter_username: </span><span class="n">your</span> <span class="n">twitter</span>
+<span class="ss">github_username: </span><span class="n">your</span> <span class="n">github</span>
+<span class="ss">facebook_username: </span><span class="n">your</span> <span class="n">facebook</span>
+
+<span class="c1"># Markdown seetings</span>
+<span class="ss">makrdown: </span><span class="n">redcarpet</span>
+<span class="ss">redcarpet:
+  extensions:
+    </span><span class="o">-</span><span class="p">[</span> <span class="n">something</span> <span class="n">here</span> <span class="p">]</span>
+</code></pre>
+</div>
+
+<p>If you set variables in _config.yml, you can use them in HTML as Liquid Language. For instance:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>{{ github_username }}<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+</div>
+
+<p>It will turned into real HTML context:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>your_github_username<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+</div>
+<p>For more information about Liquid language, you can check <a href="https://jekyllrb.com/docs/home/">Jekyll offical docs site</a>.
+The point is, whenever you modify the _config.yml, server needs to be restarted again or <code class="highlighter-rouge">_site</code> needs to be rebuild.</p>
+
+<hr />
+
+<h2 id="write-post">Write Post</h2>
+
+<p>After some basic setting, you can write your own blog now. You can use any editor to write blog at the path of <code class="highlighter-rouge">_post</code>, at the same time, Jekyll server can keep watch over your post and refresh the web page. Here is the point you should be care about:</p>
+
+<ul>
+  <li>The extension of post file should be <code class="highlighter-rouge">.markdown</code>,<code class="highlighter-rouge">.md</code>(and so on, I use <code class="highlighter-rouge">.md</code>).</li>
+  <li>Post filename should be write like: <code class="highlighter-rouge">YYYY-MM-DD-your-blog-name.md</code></li>
+</ul>
+
+<p>Open one post, write below code at first of file:</p>
+
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Your</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">title"</span>
+<span class="s">date</span><span class="pi">:</span>   <span class="s">2016-03-21 15:35:16 +0900</span>
+<span class="s">category</span><span class="pi">:</span> <span class="s">Blog</span>
+<span class="s">tag</span><span class="pi">:</span> <span class="s">Test</span>
+<span class="nn">---</span>
+</code></pre>
+</div>
+
+<p>Go on write something you want after these code. These code are provided to Jekyll for explaining some info of post. Index page can use ttile variable to show posts order by date variable, and also we can sort out posts with category and tag variables. Well, you can find more information about how to use these varibale at <a href="https://jekyllrb.com/docs/home/">offical page</a> or I will post new blog about it, you can subscribe it.</p>
+
+<hr />
+
+<h2 id="use-markdown">Use Markdown</h2>
+
+<p>Why we use Jekyll to write blog is beacuse we do not need to focus on HTML pages every time, just concentrate on writting. And with Markdwon, this process will be more easy and happy.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is a lightweight markup language with plain text. We just write some text, and Markdown processers help us to translate it into beautiful HTML pages. Jekyll normally supports two markdown renderers: <code class="highlighter-rouge">Redcarpet</code> and <code class="highlighter-rouge">Kramdown</code>, even we can also make our own markdown processors. In my blog project, I used <code class="highlighter-rouge">Redcarpet</code>. So I make configuration like here:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Here are write at _config.yml</span>
+<span class="ss">markdown: </span><span class="n">redcarpet</span>
+<span class="ss">redcarpet:
+  extensions:
+      </span><span class="o">-</span> <span class="n">fenced_code_blocks</span>
+      <span class="o">-</span> <span class="n">no_intra_emphasis</span>
+      <span class="o">-</span> <span class="n">strikethrough</span>
+      <span class="o">-</span> <span class="n">autolink</span>
+      <span class="o">-</span> <span class="n">tables</span>
+</code></pre>
+</div>
+<p>The extensions are used normally:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">fenced_code_blocks</code>: This will make it easy to write code.</li>
+  <li><code class="highlighter-rouge">no_intra_emphasis</code>: Do not parse emphasis inside of words. Strings such as <code class="highlighter-rouge">foo_bar_baz</code> will not generate <code class="highlighter-rouge">&lt;em&gt;</code> tags.</li>
+  <li><code class="highlighter-rouge">strikethrough</code>: Parse strikethrough, PHP-Markdown style. Two <code class="highlighter-rouge">~</code> characters mark the start of a strikethrough. Such as <del>Text</del>.</li>
+  <li><code class="highlighter-rouge">autolink</code>: Parse links even when they are not enclosed in &lt;&gt; characters. Autolinks for the http, https and ftp protocols will be automatically detected.</li>
+  <li><code class="highlighter-rouge">tables</code>: Parse tables.</li>
+</ul>
+
+<p>There are some basic syntax rules, please have a look at <a href="https://guides.github.com/features/mastering-markdown/">Github Guide</a>.</p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>Use the jekyll to make own blog, and then we can focus on writting blogs. If we want to chage the theme of blog, we can also check <a href="http://jekyllthemes.org/">here</a>, fork their repository. Or we can make own themes, it’s a big challenge for skills of Front-End. OK, let’s enjoy blog now.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<blockquote>
+  <ul>
+    <li>Jekyll offical docs site: <a href="https://jekyllrb.com/docs/home/">https://jekyllrb.com/docs/home/</a></li>
+    <li>Jekyll GitHub repository souce code: <a href="https://github.com/jekyll/jekyll">https://github.com/jekyll/jekyll</a></li>
+    <li>Markdown processer redcarpet: <a href="https://github.com/vmg/redcarpet">https://github.com/vmg/redcarpet</a></li>
+    <li>Jekyll theme offical site: <a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a></li>
+  </ul>
+</blockquote>
+
+  </div>
+
+  <hr>
+
+  <div class="post-nav">
+    
+    <a href="/2016/03/21/welcome-to-jekyll" class="left link">
+    
+      << Previous
+    </a>
+
+    
+    <a href="/2016/09/04/begin-wih-rails" class="right link">
+    
+      Next >>
+    </a>
+  </div>
+
+  <hr>
+  
+    <div id="disqus_thread"></div>
+<script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() {  // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//simcookiesgithubio.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  &copy;&nbsp;2016 by Simcookies with Jekyll 3.2.1. All rights reserved.
+  <div class="quick-link" id="quick-link">
+    <a id="page-top">
+      <span class="fa-stack fa-lg">
+	<i class="fa fa-square fa-stack-2x"></i>
+	<i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+    <a href="/">
+      <span class="fa-stack fa-lg">
+	<i class="fa fa-square fa-stack-2x"></i>
+	<i class="fa fa-home fa-stack-1x fa-inverse"></i>
+      </span>      
+    </a>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

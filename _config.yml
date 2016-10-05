@@ -22,8 +22,8 @@ twitter_username:  Simcookies
 github_username:   Simcookies
 
 # Build settings
+keep: [".git", ".nojekyll"]
 gems: [jekyll-paginate]
-destination: ../site
 permalink: /:year/:month/:day/:title
 paginate: 10
 paginate_path: "page:num"
