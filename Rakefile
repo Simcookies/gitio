@@ -63,7 +63,7 @@ task :push do
   puts
 
   puts "Building site...."
-  system "bundle exec jekyll build"
+  system "JEKYLL_ENV=production bundle exec jekyll build"
   puts
 
   cd '_site' do
