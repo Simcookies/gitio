@@ -1,7 +1,7 @@
 ---
 title: "Fix Nvidia bug in Ubuntu 16.04"
-category: Solution
-tags: Linux Ubuntu
+category: solution
+tags: linux ubuntu
 ---
 
 After I found a lot of problems with Windows 10, I installed Ubuntu 16.04 together with it. However when I finished installing it, I checked the lastest driver of Nvidia and replaced it from test to offical version, errors showed out: Driver "ebridge" was registered. So I searched online, also did as they said, but it still didn't work. Finally, I just made a little change in it. Here is the way.

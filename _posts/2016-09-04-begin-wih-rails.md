@@ -1,7 +1,7 @@
 ---
 title: "Begin with Rails"
-category: Basics
-tags: Rails
+category: basics
+tags: rails
 ---
 
 For a new developer of Rails, it may be a quite problem to distinguish the concepts of Ruby, Rails, rvm, gem, bundle and rake. So I want post this blog to summarize them, also summarize the steps to install Rails 4 on Linux Ubuntu 16.04.

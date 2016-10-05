@@ -1,6 +1,6 @@
 ---
 title: "Post blogs with Jekyll"
-category: Blog
+category: blog
 tags: jekyll markdown
 ---
 
