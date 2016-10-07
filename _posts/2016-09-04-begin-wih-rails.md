@@ -7,7 +7,7 @@ tags: rails
 For a new developer of Rails, it may be a quite problem to distinguish the concepts of Ruby, Rails, rvm, gem, bundle and rake. So I want post this blog to summarize them, also summarize the steps to install Rails 4 on Linux Ubuntu 16.04.
 
 
-## Basic Concepts
+# Basic Concepts
 
 |Name|Description|
 |----|-----------|
@@ -23,13 +23,13 @@ For a new developer of Rails, it may be a quite problem to distinguish the conce
 
 ------------------
 
-## Install Rails 4
+# Install Rails 4
 
-### Test OS
+## Test OS
 
 > Linux -- Ubuntu 16.04
 
-### Install RVM
+## Install RVM
 
 ```
 ~ $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -43,7 +43,7 @@ After installing, you can use ```rvm -v``` to check version of RVM you installed
 rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
 ```
 
-### Install Ruby with RVM
+## Install Ruby with RVM
 
 If you installed RVM successfully, you can use it to install RVM now. Firstly, you can use ```rvm list known``` to list all versions you can install, and choose from them.
 
@@ -105,13 +105,13 @@ fi
 
 After this, I think it will be OK. Finally, use ```gem -v``` to check version of Gemfile.
 
-### Install Bundler and Rails 4
+## Install Bundler and Rails 4
 
 ```gem install bundle``` to install bundler.
 
 ```gem install rails --version=4.2.7.1``` Use ```--version``` option to install specific rails.
 
-### Test Installing
+## Test Installing
 
 According the offical documentation ```rails new blog``` to make new rails project. But it will bundle install the lastest Rails and related gems automaticly, so we have to specify the version of rails which we want, like this:
 
@@ -132,7 +132,7 @@ Finally, ```rails server``` can start server at localhost:4000, you can input th
 
 ------------------
 
-## Surmmary
+# Surmmary
 
 The versions of deferent parts and install order are very important, here I made a flow figure:
 
@@ -142,7 +142,7 @@ This post was writed to help new rails developer with deeper understanding about
 
 ---------------------
 
-## References
+# References
 
 > * Offical RVM page: <https://rvm.io/>
 > * Chinese install guide book: <https://ruby-china.org/wiki/rvm-guide>
