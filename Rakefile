@@ -33,6 +33,7 @@ task :post do
   end
 end
 
+# Usage: rake draft title="A title"
 desc "Create a new draft"
 task :draft do
   unless File.directory?('./_drafts')
