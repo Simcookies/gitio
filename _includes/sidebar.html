@@ -43,8 +43,10 @@
     <div class="context">
       {% for post in site.posts limit:10 %}
       <li>
-	<i class="fa fa-link" aria-hidden="true"></i>&nbsp;
-	<a href="{{ post.url }}">{{ post.title }}</a>
+	<div>
+	  <i class="fa fa-link" aria-hidden="true"></i>&nbsp;
+	  <a href="{{ post.url }}">{{ post.title }}</a>
+	</div>
       </li>
       {% endfor %}
     </div>
