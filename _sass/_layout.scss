@@ -382,6 +382,10 @@
     p {
 	line-height: 27px;
     }
+
+    a:hover {
+	text-decoration: underline !important;
+    }
 }
 
 .post-nav {

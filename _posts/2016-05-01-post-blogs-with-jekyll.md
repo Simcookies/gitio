@@ -6,7 +6,9 @@ tags: jekyll markdown
 
 Jekyll is a tool can transform plain text into static websites and blog. It's a open source project on [Github](https://github.com/jekyll/jekyll). In this blog, I will talk about how to install Jekyll and use it to generate our static blogs.
 
-## Install jekyll
+-------------------------------------------------------------------------------
+
+# Install jekyll
 
 Jekyll writed by Ruby, they pack up it as a gem, so we can use RubyGems to install it. Use command like these:
 
@@ -30,9 +32,9 @@ end
 
 After making Gemfile, we can use `bundle install` to install all gems we need, if we want to add some other gems, we can add into Gemfile, and run `bundle install` again.
 
----------------
+-------------------------------------------------------------------------------
 
-## Directory
+# Directory
 
 Because the website is static, we can modify it by CSS/HTML and JavaScript. Let's check the directory firstly:
 
@@ -74,9 +76,9 @@ Here I made a table to give detials about them:
 |index.html and other HTML, Markdown files | These will be build directly to the build root directory. |
 |other file or floder | These will also be build and included to root directory, such as css or script.|
 
--------------
+-------------------------------------------------------------------------------
 
-## Configuration
+# Configuration
 
 Almost all of configurations and global variables are stored in _config.yml. The format of configuration should be like `option: value` or `variable: value`. For example, normally , we need config the site info, just do like this:
 
@@ -116,7 +118,7 @@ The point is, whenever you modify the _config.yml, server needs to be restarted 
 
 -------------------------------------------------------------------------------
 
-## Write Post
+# Write Post
 
 After some basic setting, you can write your own blog now. You can use any editor to write blog at the path of `_post`, at the same time, Jekyll server can keep watch over your post and refresh the web page. Here is the point you should be care about:
 
@@ -140,7 +142,7 @@ Go on write something you want after these code. These code are provided to Jeky
 
 -------------------------------------------------------------------------------
 
-## Use Markdown
+# Use Markdown
 
 Why we use Jekyll to write blog is beacuse we do not need to focus on HTML pages every time, just concentrate on writting. And with Markdwon, this process will be more easy and happy. 
 
@@ -167,15 +169,15 @@ The extensions are used normally:
 
 There are some basic syntax rules, please have a look at [Github Guide](https://guides.github.com/features/mastering-markdown/).
 
-----------
+-------------------------------------------------------------------------------
 
-## Summary
+# Summary
 
 Use the jekyll to make own blog, and then we can focus on writting blogs. If we want to chage the theme of blog, we can also check [here](http://jekyllthemes.org/), fork their repository. Or we can make own themes, it's a big challenge for skills of Front-End. OK, let's enjoy blog now.
 
-----------
+-------------------------------------------------------------------------------
 
-## References
+# References
 
 > * Jekyll offical docs site: <https://jekyllrb.com/docs/home/>
 > * Jekyll GitHub repository souce code: <https://github.com/jekyll/jekyll>

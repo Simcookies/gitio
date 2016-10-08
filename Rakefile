@@ -74,3 +74,10 @@ task :push do
     puts "`master' branch updated."
   end
 end
+
+desc "Run server with draft"
+task :default do
+  puts "Building site with Drafts..."
+  system "bundle exec jekyll s --drafts"
+  puts
+end

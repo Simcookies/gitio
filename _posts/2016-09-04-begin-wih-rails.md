@@ -6,6 +6,7 @@ tags: rails
 
 For a new developer of Rails, it may be a quite problem to distinguish the concepts of Ruby, Rails, rvm, gem, bundle and rake. So I want post this blog to summarize them, also summarize the steps to install Rails 4 on Linux Ubuntu 16.04.
 
+-------------------------------------------------------------------------------
 
 # Basic Concepts
 
@@ -21,7 +22,7 @@ For a new developer of Rails, it may be a quite problem to distinguish the conce
 |Rake|A simple ruby build program with capabilities similar to make.|
 |Rakefile|Rake's version of Makefiles|
 
-------------------
+-------------------------------------------------------------------------------
 
 # Install Rails 4
 
@@ -130,7 +131,7 @@ Errors will be showed when we start server. So itt's better to spectify version.
 
 Finally, ```rails server``` can start server at localhost:4000, you can input this address in browser and check the main page. Here we go with Rails 4!
 
-------------------
+-------------------------------------------------------------------------------
 
 # Surmmary
 
@@ -140,7 +141,7 @@ The versions of deferent parts and install order are very important, here I made
 
 This post was writed to help new rails developer with deeper understanding about so many concepts. Also it helps me not to forget the install process. After them, enjoy developing in Rails!
 
----------------------
+-------------------------------------------------------------------------------
 
 # References
 
