@@ -1,0 +1,15 @@
+<div class="mark-link">
+  <a id="bookmark">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</div>
+<div id="toc-area" class="sidebar" style="display:none">
+  <div class="col toc-area">
+    &nbsp;&nbsp;<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;
+    Table of Contents
+    {{ content | toc_only }}
+  </div>
+</div>

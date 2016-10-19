@@ -13,16 +13,16 @@ layout: default
 	<i class="fa fa-calendar"></i>&nbsp;
 	<span>{{ post.date | date: "%b %-d, %Y" }}</span>&nbsp;
 
+	{% if post.category %}
+	&nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
+	<span class="category-div">{{ post.category }}</span>
+	{% endif %}
+
 	{% if post.tags.size > 0 %}
 	&nbsp;<i class="fa fa-tag"></i>&nbsp;
 	{% for tag in post.tags %}
   	<a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
 	{% endfor %}
-	{% endif %}
-
-	{% if post.category %}
-	&nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
-	<span class="category-div">{{ post.category }}</span>
 	{% endif %}
 
       </div>
@@ -43,7 +43,7 @@ layout: default
     {% else %}
     <a class="left unlink">
     {% endif %}
-      << Previous
+      << Prev
     </a>
 
     {% if paginator.next_page_path %}

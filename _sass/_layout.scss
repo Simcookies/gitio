@@ -516,3 +516,37 @@
 .page-nav {
     display: inline-block;   
 }
+
+/**
+ * TOC-area
+**/
+.mark-link {
+    @include media-query($on-laptop) {
+	display: none;
+    }
+    width: 48px;
+    position: fixed;
+    top: 90px;
+    right: 1%;
+    font-size: 18px;
+    z-index: 5000;
+
+    a {
+	color: $bg-header-color;
+
+	&:hover {
+	    color: lighten($bg-header-color, 10%);
+	}
+    }
+}
+
+.toc-area {
+    position: fixed;
+    width: inherit;
+
+    .section-nav {
+	padding: 1em 0 1.5em 0;
+	list-style: none;
+	margin-bottom: 0;
+    }
+}

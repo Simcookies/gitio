@@ -15,6 +15,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      toc: true
 
 
 # Social info
@@ -23,9 +24,13 @@ github_username:   Simcookies
 
 # Build settings
 keep: [".git", ".nojekyll"]
-gems: [jekyll-paginate]
+gems:
+  - jekyll-toc
+  - jekyll-paginate
+  - jemoji
+
 permalink: /:year/:month/:day/:title
-paginate: 10
+paginate: 6
 paginate_path: "page:num"
 
 # Markdown settings

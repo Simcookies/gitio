@@ -34,4 +34,11 @@ jQuery(document).ready(function() {
 	    e.stopPropagation();
 	});
     }
+
+    //TOC-area
+    var markBtn = jQuery("#bookmark");
+    markBtn.click(function () {
+	jQuery("article").toggleClass("home post", "fast", "easeOutSine");
+	jQuery("#toc-area").toggle("50");
+    });
 });
