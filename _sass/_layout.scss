@@ -548,5 +548,18 @@
 	padding: 1em 0 1.5em 0;
 	list-style: none;
 	margin-bottom: 0;
+
+	a {
+	    color: gray;
+	    &:hover {
+		color: #2a7ae2;
+	    }
+	}
+
+	@for $i from 2 through 4 {
+	    .toc-h#{$i} {
+	       padding-left: $i - 1em;
+	    }
+	}
     }
 }
