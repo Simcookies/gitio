@@ -50,4 +50,6 @@ layout: default
   {% endunless %}
 
 </article>
-{% include bookmark.html %}
+{% if page.toc %}
+  {% include bookmark.html %}
+{% endif%}
