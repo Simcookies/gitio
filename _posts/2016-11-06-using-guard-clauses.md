@@ -6,7 +6,7 @@ tags: refactoring
 toc: false
 ---
 
-During my Rails develop process, somtimes I need to use many conditions in code and code will be a little chubbby like this:
+During my Rails develop process, sometimes I need to use many conditions in code and code will be a little chubbby like this:
 
 ```ruby
 # Ruby code
