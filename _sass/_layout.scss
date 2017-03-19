@@ -6,10 +6,12 @@
     height: 56px;
     background: $bg-header-color;
 
-    .wrapper {
-        width: 100%;
-        position: fixed;
-        z-index: 100;
+    @include media-query($on-palm) {
+        .wrapper {
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
     }
 }
 
