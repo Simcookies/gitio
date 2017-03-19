@@ -6,14 +6,14 @@
   <body>
 
     {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="scroll-content">
+      <div class="page-content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
       </div>
+      {% include footer.html %}
     </div>
-
-    {% include footer.html %}
 
     {% if jekyll.environment == 'production' %}
       {% include analytics.html %}
