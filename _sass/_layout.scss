@@ -7,11 +7,10 @@
     background: $bg-header-color;
 
     @include media-query($on-palm) {
-        .wrapper {
-            width: 100%;
-            position: fixed;
-            z-index: 100;
-        }
+        top: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
     }
 }
 
@@ -138,6 +137,10 @@
 .scroll-content {
     height: calc(100vh - 56px);
     overflow-y: scroll;
+
+    @include media-query($on-palm) {
+        height: 100%;
+    }
 }
 
 /**
@@ -149,7 +152,7 @@
 
     @include media-query($on-palm) {
 	background: #fff;
-	padding: 0;
+        padding: 56px 0 0 0;
     }
 }
 
