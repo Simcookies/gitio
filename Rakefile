@@ -58,9 +58,9 @@ end
 
 desc "Push to Github"
 task :push do
-  puts "Pushing to `source' branch:"
-  system "git push origin source"
-  puts "`source' branch updated."
+  puts "Pushing to source code repository:"
+  system "git push origin master"
+  puts "source code repository branch updated."
   puts
 
   puts "Building site...."
@@ -68,11 +68,11 @@ task :push do
   puts
 
   cd '_site' do
-    puts "Pushing to `master' branch:"
+    puts "Pushing to site repository:"
     system "git add -A"
     system "git commit -m 'Update at #{Time.now.utc}'"
-    system "git push origin master"
-    puts "`master' branch updated."
+    system "git submodule update"
+    puts "site repository updated."
   end
 end
 
