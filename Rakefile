@@ -63,6 +63,10 @@ task :push do
   puts "source code repository branch updated."
   puts
 
+  cd '_site' do
+    system "git checkout master"
+  end
+
   puts "Building site...."
   system "JEKYLL_ENV=production bundle exec jekyll build"
   puts
@@ -71,9 +75,11 @@ task :push do
     puts "Pushing to site repository:"
     system "git add -A"
     system "git commit -m 'Update at #{Time.now.utc}'"
-    system "git submodule update"
-    puts "site repository updated."
+    system "git push origin master"
   end
+
+  system "git submodule update"
+  puts "site repository updated."
 end
 
 desc "Run server with draft"
