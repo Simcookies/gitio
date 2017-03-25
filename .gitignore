@@ -2,7 +2,4 @@
 .jekyll-metadata
 .DS_Store
 Gemfile.lock
-_posts/
-_drafts/
 _site/
-wiki/
