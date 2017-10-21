@@ -23,7 +23,7 @@ twitter_username:  Simcookies
 github_username:   Simcookies
 
 # Build settings
-keep: [".git", ".nojekyll"]
+keep: [".git", ".nojekyll", ".htaccess"]
 gems:
   - jekyll-toc
   - jekyll-paginate
