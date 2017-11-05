@@ -39,6 +39,6 @@ Solutions of some errors.
 
     TLU to install `kastrup` and `tex-gyre`
 
-6. When transfer dvi to pdf with dvipdfmx, it said: Could not locate a virtual/physical font for TFM "rml".: Find file of /usr/local/texlive/2017basic/texmf-config/dvipdfmx/dvipdfmx.cfg, and uncomment "cid-x.map". After that, make `sudo mktexlsr`.
+6. When transfer dvi to pdf with dvipdfmx, it said: Could not locate a virtual/physical font for TFM "rml" (or "gbm" here).: Find file of /usr/local/texlive/2017basic/texmf-config/dvipdfmx/dvipdfmx.cfg, and uncomment "cid-x.map". After that, make `sudo mktexlsr`.
 7. dvipdfmx can load cid-x.map, but it said: dvipdfmx:fatal: Could not find encoding file "H". : Tex Live Utility installed "adobemapping".
-    
+
