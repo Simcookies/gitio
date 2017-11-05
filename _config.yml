@@ -5,7 +5,8 @@ email: songan840136@gmail.com
 description: All about Simcookies Project.
 baseurl: "" # the subpath of site
 url: "http://simcookies.github.io" # the base hostname & protocol for site
-exclude: ["Gemfile", "Gemfile.lock", "Rakefile", "gulpfile.js", "node_modules"]
+exclude: ["Gemfile", "Gemfile.lock", "Rakefile",
+          "gulpfile.js", "node_modules", "package-lock.json"]
 
 # default setting
 defaults:
