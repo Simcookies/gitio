@@ -15,7 +15,7 @@ Sometimes we may need to insert math equation into posts. [MathJax](https://www.
 Add the script below into every page (or add it into template page "default.html"):
 
 ```html
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```
 
 ## Use redcarpet or karmdown as Markdown compiler[^footnote]
