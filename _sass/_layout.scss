@@ -569,8 +569,20 @@
 
 	@for $i from 2 through 4 {
 	    .toc-h#{$i} {
-	       padding-left: $i - 1em;
+	       padding-left: $i - 1pt;
 	    }
 	}
+    }
+}
+
+.emoji {
+    display: inline !important; 
+}
+
+.footnotes {
+    color: gray;
+
+    p {
+        margin: 0 !important;
     }
 }
