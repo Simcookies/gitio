@@ -1,92 +1,92 @@
 ---
-title: "Web 全栈开发指南"
+title: "'Web Full-stack develop reference'"
 date: 2017-12-02 15:49:44 +0900
 category: basic
 tags: ruby python server
 ---
 
-周末一天的时间看完了*[Web 全栈开发指南](https://www.gitbook.com/book/coin8086/getfullstack/details)*这本书[^1]. 正如书中所说的一样, 其着重于Web 开发的原理,一般方法和工具, 而不是某一种特殊的语言. 书的前面一半的内容主要是介绍 Web 相关的基本知识包括了网页三要素 HTML, CSS, JavaScript 三个部分的基本内容, 因此我就大概地翻看了一遍. 主要是第三章的_编程语言与技术_开始着重看了一下.再加上其他的一些调查, 写成下面的博客. (这一篇实在不想用英语写了 :joy:)
+I finished reading the book of *[Web Full-stack Develop Reference](https://www.gitbook.com/book/coin8086/getfullstack/details)* at one weekend[^1]. As writing in the book, it focuses on the principles, general methods and tools of Web developing, not a specific programming language. The first half of the book's content is mainly introduced the basic knowledge of the Web includes the three elements of the web page elements -- HTML, CSS, JavaScript, so I just looked through it. I focused on reading the third chapter -- Programming Languages and Technologies. Besides, I made some others related researches about it and write a new post as below. (It's terriable to write in English:joy:)
 
 -------------------------------------------------------------------------------
 
-# (动态内容)服务端编程方式
+# (Dynamic content) Some ways for Server Programming
 
-## 通用网关接口CGI
+## Common Gateway Interface, CGI
 
-  虽然目前已经基本上没有人在用了, 但是Web 服务器还是在支持着它.它的处理步骤:
+Although no one is using it today basically, the mainstream Web server still supports it. Here are the processing steps of it:
 
-  1. 通过 Internet 把用户的请求送到服务器.
-  2. 服务器把接收到的请求交给 CGI 程序处理.
-  3. CGI 程序把处理的结果传给服务器.
-  4. 服务器再把响应送给用户
+  1. User's requests are sent to the server through the Internet.
+  2. The server sends the received request to the CGI program for processing.
+  3. CGI program passes the results to the server.
+  4. The server sends the responses to users.
 
-  而 CGI 在处理的时候是每一个请求对应一个进程的, 因此对于较大请求量的时候 会消耗很多资源, CGI 就不是一个好的选择了.
+While CGI handles one process for per request, so CGI is not a good choice for lots of requests that consume a lot of resources.
 
 ## PHP[^2]
 
 ## Java (Servlet)
 
-  Java Servlet 只能为 Java 提供服务器. 它的处理步骤:
+Java Servlet just provides servers for Java. Here is it's processing steps:
 
-  1. 通过 Internet 把用户的请求送到服务器.
-  2. 服务器启动并调用 Servlet
-  3. Servlet 根据用户的请求进行处理并传递给服务器
-  4. 服务器再把响应送给用户
+  1. User's requests are sent to the server through the Internet.
+  2. The server starts and calls Servlet.
+  3. Servlet processes according to user's requests and passes the results to the server.
+  4. The server sends the responses to users.
 
-  和 CGI 不同的地方在于, Servlet 每一个请求对应一个线程. 在性能方面比 CGI 高很多. 具体的这里有一篇[参考文章](http://www.c4learn.com/java/servlet/servlet-vs-cgi/). 而在真正开发的过程中我们接触到的是框架, 比如 [Spring](https://spring.io/) 之类的.
+Java Servlet handles one thread for per request which is different from CGI, so it has better performance than CGI (If you want to know more about this, please read this [reference](http://www.c4learn.com/java/servlet/servlet-vs-cgi/). In fact, we use more frameworks such as [Spring](https://spring.io/) instead of using Java Servlet directly.
 
 ## Python
 
-  Python 在服务端主要依赖于 WSGI (Web Server Gateway Interface) 规范. 这个规范定义了服务器和应用程序的交互接口. 
+Python mainly depends on the WSGI (Web Server Gateway Interface) specification on the server side. This specification defines the main interface between the server and the application.
 
-  在 WSGI 中有一个中间件(Middleware) 的概念: 服务器在接收到请求之后, 由中间件先进行响应, 然后再传递给下一级的应用或者下一层的中间件. 简单的说, 就是在服务器与应用程序之间加上了一层或者多层中间处理, 在中间件里面, 可以实现日志, 错误处理等等.
+There is a Middleware concept in WSGI: after the server receives the request, the middleware responds firstly, and then send to the next level which may be an application or another middleware. Simply say, it adds one or more middlewares which can achieve log or handle errors between the server and the application.
 
 ## Ruby
 
-  Ruby 是我一直使用的开发语言. 虽然一直在使用 Ruby on Rails, 但是居然没有听说过 Rack, 实在是汗颜.:cold_sweat: 同样类似于 Python 的 WSGI, Rack 也有中间件的概念[^3].
+Ruby is the programming language which I am always using. Rack specification defines the interface between the server and the Ruby application which is similar to WSGI in Python. I never heard about Rack even I am using Ruby on Rails (it is based on Rack :cold_sweat:). As WSGI in Python, Rack also has the concept of middleware.[^3]
 
 ## Node.js[^4]
 
 -------------------------------------------------------------------------------
 
-# 服务器架构
+# Server architecture
 
-以前对这一块也是模模糊糊, 看完之后有了一个大概的轮廓. 包括我们常听说的 Apache 或者 Nginx, IIS 之类的各种概念进行一下整理.
+I was vague about this concept before, but I got a rough outline after reading the book. I will sort out various concepts includes well known Apache, Nginx or IIS.
 
-## 最基本的情况
+## Basic situation
 
-如果站点的访问量不是很多, 可以直接把服务器放在网络上, 给出下图的例子:
+If the site's traffic is not a lot, we can put the server directly on the network. Here is an instance:
 
 ![basic instance](/public/image/basic_web_server.png)
 
-这里的 Web 服务器可以是 Apache HTTP Server, Nginx, Microsoft 的 IIS 等等. 还有上面说到的专供的 Servlet, 只为 Java 服务之类的服务器. 还有 Node.js 自带的 Web 服务器.
+The web server here may be Apache HTTP Server, Nginx, Microsoft's IIS and so on; dedicated Servlet which I said above, it just provides servers for Java; and the web server embedded in Node.js.
 
 ## Load balancing
 
-一般来说网站一个服务器是不够的, 需要一组服务器. 负载均衡器接受 HTTP 请求, 并分发给内部的 Web 服务器. 知名的负载均衡器有 [HAProxy](https://en.wikipedia.org/wiki/HAProxy), 而上面说的 Apache, Nginx 也可以充当负载均衡器.
+In general, one Web Server for one website is not enough, we need a group of servers. The load balancer accepts the HTTP request and distributes it to the internal web server. There is a well-known load balancer named [HAProxy](https://en.wikipedia.org/wiki/HAProxy), the Apache, Nginx which I said above can also act as a load balancer.
 
-## 具体分析
+## Specifi analysis
 
-之前的开发中总是会听到 Nginx + Passenger + Ruby on Rails 或者 Apache + Unicorn + Ruby on Rails 的服务器结构, 详细解释每一个环节的作用就是: 
+I often hear the Web Server Architecture composed of Nginx + Passenger + Ruby on Rails or Apache + Unicorn + Ruby on Rails, here are the details explanations for each link:
 
-Nginx 或者 Apache 是 负载均衡器同时也是 Web 服务器, 它们用来响应客户端的请求进而转发给应用程序. Unicorn 是 Ruby 的一个 HTTP 服务器. 他会在自己的进程空间内加载 Ruby 的应用, 并且将外部的 HTTP 内容进行包装后和 Ruby 应用进行通信.Unicorn 易于调试, 用于管理 Rack 类的应用程序. 与之类似的还有 Thin, Puma 等等.而 Passenger 有点特殊, 它直接融入到了Nginx 或者 Apache, 成为他们能够直接使用的模块:
+Nginx or Apache is the load balancer and also the web server, which responds to client requests and sends them to the application. Unicorn is an HTTP server for Ruby. It will load the Ruby application in its own process space, and the package HTTP contents outside and communicate with Ruby application. Unicorn is easy to debug, and it's applied to manage Rack application. Some other server such to Thin, Puma is similar as Unicorn. And Passenger is a bit special, it's directly integrated into Nginx and Apache and becomes the module which they can use directly.
 
 > From Wikipedia
 > Phusion Passenger (informally also known as mod\_rails and mod\_rack among the Ruby community) is a free web server and application server with support for Ruby, Python and Node.js
 
-Passenger 也可以统一管理 Rails 的进程数量, 生命周期, 请求队列等等. 最后这张图可能有助于理解上述的关系:
+Passenger can also manage the number of Rails processes, life cycles, request queues and so on. This fig can help you to understand the relationship between them.
 
 ![server analysis](/public/image/server_analysis.png)
 
 -------------------------------------------------------------------------------
 
-# 参考
+# Refferences
 
 > * [ApacheとNginxとPassengerとUnicornの違い【すごい初心者向け】](http://fujiike.hateblo.jp/entry/2015/08/20/170751)
 > * [Ruby on Rails Server options](https://stackoverflow.com/questions/4113299/ruby-on-rails-server-options)
 > * [Web全栈技术指南](https://www.gitbook.com/book/coin8086/getfullstack/details)
 
-[^1]: 严格地说只是作者自己的总结写成的 Gitbook.
-[^2]: 对于 PHP 不是很了解, 毕竟我是入门级玩家.
-[^3]: 对于 WSGI 和 Rack 的介绍, 我想再具体写一个博客.
-[^4]: 在学习过程中, 可能学完之后再写博客~
+[^1]: Strictly speaking, it is only the author's own summary of the Gitbook.
+[^2]: I am not very understanding for PHP, after all, I am an 'entery level' player.
+[^3]: I want to write an another post to introduce WSGI and Rack.
+[^4]: Still in studying process, I may write a new post about it after it~
