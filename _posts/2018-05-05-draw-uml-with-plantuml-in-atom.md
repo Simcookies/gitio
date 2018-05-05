@@ -42,6 +42,7 @@ There are two plugins necessary for using PlantUML in Atom.
 You can install these two packages with `apm` or directly install them in Atom GUI.
 
 After installation, plantuml-preview needs some configurations.
+
 ![setting_of_plantuml](/public/image/setting_of_plantuml.png)
 
 - **Graphviz Dot Executable**: The path of dot which you get it by `which dot`.
