@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 gem "jekyll", "3.2.1"
 gem "rake"
+gem "pry"
 
 group :jekyll_plugin do
   gem 'jemoji'
