@@ -255,3 +255,14 @@ table {
         }
     }
 }
+
+/**
+ * MathJax
+ */
+.MathJax_Display {
+    overflow-x:auto;overflow-y:hidden;
+}
+
+.MathJax {
+    outline:0;
+}

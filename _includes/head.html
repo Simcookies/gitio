@@ -13,6 +13,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+       showProcessingMessages: false,
+       messageStyle: "none",
+       jax: ["input/TeX", "output/HTML-CSS"],
+       tex2jax: {
+           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+           displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+       }
+   });
+  </script>
   <script src="/public/script/main.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">  
 </head>
