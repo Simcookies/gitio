@@ -9,7 +9,7 @@ toc: true
 **Regression** is one class of problems in Machine Learning. Linear Regression is a basic one class of problems of Regression. I want to write a note about the Linear Regression in this post as the beginning of Machine Learning series.
 
 -------------------------------------------------------------------------------
-## Brief Introduction
+# Brief Introduction
 
 Regression problems want to find the relationship between the input variables and output variables. The *Regression* was used from a 19th-Century scientist.
 *Linear Regression* is most basic problems of Regression. We want to make a model to describe the relationship between input and output.
@@ -67,7 +67,7 @@ Now the **Find unknown $m$ and $b$** becomes **Find the min value of $J$, and ge
 
 -------------------------------------------------------------------------------
 
-## Practice corner
+# Practice corner
 
 For the 2-D case, it's quite easy to achieve that:
 
