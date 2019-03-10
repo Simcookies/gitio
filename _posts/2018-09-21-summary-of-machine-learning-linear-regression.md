@@ -1,7 +1,7 @@
 ---
 title: "Summary of Machine Learning Algorithms -- Linear Regression"
 date: 2018-09-21 14:53:00 +09000
-category: machine Learning
+category: machine learning
 tags: algorithm formula
 toc: true
 typora-root-url: ../
