@@ -7,7 +7,7 @@ baseurl: "" # the subpath of site
 url: "https://simcookies.github.io" # the base hostname & protocol for site
 exclude: ["Gemfile", "Gemfile.lock", "Rakefile",
           "gulpfile.js", "node_modules", "package-lock.json",
-          "vendor/"]
+          "package.json", "vendor/"]
 
 # default setting
 defaults:
@@ -22,7 +22,7 @@ defaults:
 
 # Social info
 twitter_username:  Simcookies
-github_username:   Simcookies
+github_username:   simcookies
 
 # Build settings
 keep: [".git", ".nojekyll", ".htaccess"]
@@ -32,7 +32,7 @@ gems:
   - jemoji
 
 permalink: /:year/:month/:day/:title
-paginate: 6
+paginate: 8
 paginate_path: "page:num"
 
 # Markdown settings
