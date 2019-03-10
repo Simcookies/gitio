@@ -9,7 +9,7 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
-      self.data['category'] = category.downcase.gsub(" ", "-")
+      self.data['category'] = category
 
     end
   end
@@ -21,6 +21,7 @@ module Jekyll
       if site.layouts.key? 'category_index'
         dir = site.config['category_dir'] || 'category'
         site.categories.keys.each do |category|
+          category = category.downcase.gsub(" ", "-")
           write_category_index(site, File.join(dir, category), category)
         end
       end
