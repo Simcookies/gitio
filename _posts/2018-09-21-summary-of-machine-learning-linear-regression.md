@@ -4,6 +4,7 @@ date: 2018-09-21 14:53:00 +09000
 category: machine Learning
 tags: algorithm formula
 toc: true
+typora-root-url: ../
 ---
 
 **Regression** is one class of problems in Machine Learning. Linear Regression is a basic one class of problems of Regression. I want to write a note about the Linear Regression in this post as the beginning of Machine Learning series.
@@ -40,6 +41,7 @@ b&=\overline y - m\overline x
 $$
 
 After this, we can draw the best fit line as blue line, which is also our model. According this line, we can make prediction of $x=40$ which plot as red point:
+
 ![linear regression prediction](/public/image/dataset_lr_prediction.png)
 
 -------------------------------------------------------------------------------

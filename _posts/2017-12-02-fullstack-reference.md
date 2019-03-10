@@ -3,6 +3,7 @@ title: "'Web Full-stack develop reference'"
 date: 2017-12-02 15:49:44 +0900
 category: basic
 tags: ruby python server
+typora-root-url: ../
 ---
 
 I finished reading the book of *[Web Full-stack Develop Reference](https://www.gitbook.com/book/coin8086/getfullstack/details)* at one weekend[^1]. As writing in the book, it focuses on the principles, general methods and tools of Web developing, not a specific programming language. The first half of the book's content is mainly introduced the basic knowledge of the Web includes the three elements of the web page elements -- HTML, CSS, JavaScript, so I just looked through it. I focused on reading the third chapter -- Programming Languages and Technologies. Besides, I made some others related researches about it and write a new post as below. (It's terriable to write in English:joy:)

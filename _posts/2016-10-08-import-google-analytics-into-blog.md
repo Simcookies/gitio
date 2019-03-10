@@ -3,6 +3,7 @@ title: "Import Google Analytics into Blog"
 date: 2016-10-08 09:20:00 +900
 category: blog
 tags: jekyll
+typora-root-url: ../
 ---
 
 [Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics) is a freemium web analytics service offered by Google that tracks and reports website traffic. It is now the most widely used web analytics service on the Internet. You can get many information with Google analytic. For example, where is the user who visited you blog from, how long he stay at your pages and so on.

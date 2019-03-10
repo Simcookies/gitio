@@ -2,6 +2,7 @@
 title: "Network Studying Note 2"
 category: basics
 tags: internet
+typora-root-url: ../
 ---
 
 In the post of [Network Studying Note 1](/2017/03/19/network_studying_note_1), I took notes about the history of Internet and Internet Protocol Suite, especially, the TCP/IP Protocol. TCP/IP contains four layers of Application, Transport, Network and Network Interface. During transmission from layer to layer, top-down is called **Encapsulation** and button-up is called **Decapsulation**. In this post, I will write about the Encapsulations of last three layers and also includes about Three-way-Handshake.

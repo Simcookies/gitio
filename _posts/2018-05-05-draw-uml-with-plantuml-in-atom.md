@@ -3,6 +3,7 @@ title: "Draw UML with PlantUML in Atom"
 date: 2018-05-05 14:23:16 +0900
 category: tool
 tags: plantUML atom
+typora-root-url: ../
 ---
 
 I want to use UML to help me understanding how Jekyll works, so I found [PlantUML](http://plantuml.com/). It's an open source tool which can draw UML pictures quickly. In this post, I will config PlantUML into [Atom](https://atom.io/).

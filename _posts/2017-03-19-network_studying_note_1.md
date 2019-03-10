@@ -2,6 +2,7 @@
 title: "Network Studying Note 1"
 category: basics
 tags: internet
+typora-root-url: ../
 ---
 
 There are some basic pieces of knowledge for programmers, C, Data Structure and Algorithm, Network, Operation System. So it's time to learning about them deeply. This blog is about my learning note of Network. It includes the history of Internet, theory, and application in Linux. If I want to know a new technology, I will first be interested in its history. Knowing the history of some tech will help me to understand why this tech is necessary and why it's fixtures work like this. So let me begin with history.
