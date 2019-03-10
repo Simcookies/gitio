@@ -10,14 +10,15 @@
     <i class="fa fa-archive"></i>&nbsp;<span>Categories</span>
     <div class="context">
       <ul class="category-list">
-	{% for category in site.categories %}
-	<li>
-	  <a href="/category/{{ category | first | slug | prepend: site.baseurl }}">
-	    <span class="category_name">{{ category | first }}</span>
-	    <span class="category_count">({{ category | last | size }})</span>
-	  </a>&nbsp;
-	</li>
-	{% endfor %}
+        {% assign site_cats = site.categories | sort %}
+        {% for category in site_cats %}
+        <li>
+          <a href="/category/{{ category[0] | slugify | prepend: site.baseurl }}">
+            <span class="category_name">{{ category | first }}</span>
+            <span class="category_count">({{ category | last | size }})</span>
+          </a>&nbsp;
+        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
@@ -28,10 +29,10 @@
     <div class="context">
       {% for tag in site.tags %}
       <div class="tag">
-	<a href="/tag/{{ tag | first | slugify | prepend: site.baseurl }}">
-	  <span class="tag-name">{{ tag | first }}</span>
-	  <span class="tag-count">{{ tag | last | size }}</span>
-	</a>&nbsp;
+        <a href="/tag/{{ tag | first | slugify | prepend: site.baseurl }}">
+          <span class="tag-name">{{ tag | first }}</span>
+          <span class="tag-count">{{ tag | last | size }}</span>
+        </a>&nbsp;
       </div>
       {% endfor %}
     </div>
@@ -43,10 +44,10 @@
     <div class="context">
       {% for post in site.posts limit:10 %}
       <li>
-	<div>
-	  <i class="fa fa-link" aria-hidden="true"></i>&nbsp;
-	  <a href="{{ post.url }}">{{ post.title }}</a>
-	</div>
+        <div>
+          <i class="fa fa-link" aria-hidden="true"></i>&nbsp;
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </div>
       </li>
       {% endfor %}
     </div>

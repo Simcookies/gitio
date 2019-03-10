@@ -9,7 +9,7 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.category %}
       &nbsp;<i class="fa fa-archive" aria-hidden="true"></i>&nbsp;
-      <span><a class="category-div" href="/category/{{ page.category }}">{{ page.category }}</a></span>
+      <span><a class="category-div" href='/category/{{ page.category | slugify }}'>{{ page.category }}</a></span>
       {% endif %}
       {% if page.tags.size > 0 %}
       &nbsp;<i class="fa fa-tag"></i>&nbsp;

@@ -7,26 +7,27 @@ layout: default
   <h1 class="category-title">{{ page.category }}</h1>
   <ul class="post-list">
     {% for post in site.posts %}
-      {% if post.category == page.category %}
+      {% assign cat = post.category | slugify %}
+      {% if page.category == cat %}
         <li>
           <h3><a  href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-	  <div class="post-meta">
-	    <i class="fa fa-calendar"></i>&nbsp;
-	    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>&nbsp;
-	    
-	    {% if post.tags.size > 0 %}
-	    &nbsp;<i class="fa fa-tag"></i>&nbsp;
-	    {% for tag in post.tags %}
-  	    <a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
-	    {% endfor %}
-	    {% endif %}
-	    
-	  </div>
-	</li>
+          <div class="post-meta">
+            <i class="fa fa-calendar"></i>&nbsp;
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>&nbsp;
+
+            {% if post.tags.size > 0 %}
+            &nbsp;<i class="fa fa-tag"></i>&nbsp;
+            {% for tag in post.tags %}
+            <a class="tag-div" href="/tag/{{ tag }}">{{ tag }}</a>&nbsp;
+            {% endfor %}
+            {% endif %}
+
+          </div>
+        </li>
       {% endif %}
     {% endfor %}
   </ul>
-  
+
 </div>
 
 {% include sidebar.html %}
