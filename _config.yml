@@ -31,8 +31,11 @@ gems:
   - jekyll-paginate
   - jemoji
 
+emoji:
+  src: "https://github.githubassets.com/images/icons/"
+
 permalink: /:year/:month/:day/:title
-paginate: 8
+paginate: 6
 paginate_path: "page:num"
 
 # Markdown settings
