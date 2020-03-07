@@ -29,6 +29,7 @@ task :post do
     post.puts "date: #{datetime}"
     post.puts "category:"
     post.puts "tags:"
+    post.puts "typora-root-url: ../"
     post.puts "---"
   end
 end
@@ -52,6 +53,7 @@ task :draft do
     post.puts "title: \"#{title.gsub(/-/, ' ')}\""
     post.puts "category:"
     post.puts "tags:"
+    post.puts "typora-root-url: ../"
     post.puts "---"
   end
 end

@@ -7,7 +7,7 @@ toc: true
 typora-root-url: ../
 ---
 
-**Support Vector Machine** (SVM) has become a more and more popular algorithm in the field of ML, even some times more than **Neural Network** (NN). It is widely used for classfication and regression. So, in this post I will give a brief about the SVM.
+**Support Vector Machine** (SVM) has become a more and more popular algorithm in the field of ML, even some times more than **Neural Network** (NN). It is widely used for classification and regression. So, in this post I will give a brief about the SVM.
 
 # Brief Introduction
 
@@ -15,7 +15,7 @@ SVM is a kind of supervised learning method, it has good performance for classif
 
 # Support Vector Machine
 
-First, let's say we have two types of data, one positive type and one negative type. Features have two dimensional data: $\vec{x} = (x_1, x_2)​$, which can be plotted like below (Orange for positive data and blue for negative data):
+First, let's say we have two types of data, one positive type and one negative type. Features have two dimensional data: $\vec{x} = (x_1, x_2)$, which can be plotted like below (Orange for positive data and blue for negative data):
 
 ![SVM original dataset](/public/image/svm_original_data.png)
 

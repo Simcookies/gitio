@@ -7,4 +7,5 @@ permalink: /wiki/
 ## still doing....
 
 - [GNU/Screen](/wiki/screen)
-- [Gnu/Emacs](/wiki/emacs)
+- [GNU/Emacs](/wiki/emacs)
+- [Vim Cheat Sheet](https://vim.rtorr.com/)

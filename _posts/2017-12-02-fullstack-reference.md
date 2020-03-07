@@ -1,7 +1,7 @@
 ---
 title: "'Web Full-stack develop reference'"
 date: 2017-12-02 15:49:44 +0900
-category: basic
+category: basics
 tags: ruby python server
 typora-root-url: ../
 ---

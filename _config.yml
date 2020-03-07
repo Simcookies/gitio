@@ -27,6 +27,7 @@ github_username:   simcookies
 # Build settings
 keep: [".git", ".nojekyll", ".htaccess"]
 plugins:
+  - jekyll-admin
   - jekyll-toc
   - jekyll-paginate
   - jemoji
