@@ -14,24 +14,24 @@ typora-root-url: ../
 
 Regression problems want to find the relationship between the input variables and output variables. The *Regression* was used from a 19th-Century scientist.
 *Linear Regression* is most basic problems of Regression. We want to make a model to describe the relationship between input and output.
-So let's assume the input variables are $x_1, x_2, \dots , x_n$, and the output varibale is $y$. This formula shows the linear relationship between them:
+So let's assume the input variables are $x_1, x_2, \dots , x_n$, and the output variable is $y$. This formula shows the linear relationship between them:
 
 $$
 y=m_1x_1+m_2x_2 + \dots+m_nx_n+b=m^Tx+b
 $$
 
-Here, $m_i$ is coefficient. The $m = (m_1, m_2, \dots, m_n)$ and $x = (x_1, x_2, \dots, x_n)$ are vector, the $b$ calls bias. We have the model now, what we want to do next is to find the $m$ and $b$ with given **dataset** and then, we can use the model to make some prediction of some unknown data.
+Here, $m_i$ is coefficient. The $m = (m_1, m_2, \dots, m_n)$ and $x = (x_1, x_2, \dots, x_n)$ are vectors, the $b$ calls bias. We have the model now, what we want to do next is to find the $m$ and $b$ with given **dataset** and then, we can use the model to make some prediction of some unknown data.
 
 -------------------------------------------------------------------------------
-# The case of 2-dimesion
+# The case of 2-dimension
 
-For the 2-dimesion (just one input varibale $x$ with one output variable $y$), we can get $m$ and $b$ easily. The model formula becomes $y=mx+b$ which is a very easy line and we call it the *best fit line*. $$m$$ is the best fit line slope and $b$ is best fit line y-intercept.
+For the 2-dimension (one input variable $x$ with one output variable $y$), we can get $m$ and $b$ easily. The model formula becomes $y=mx+b$ which is a very simple line and we call it the *best fit line*. $$m$$ is the best fit line slope and $b$ is best fit line y-intercept.
 
 Now, we have one dataset with $(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), \dots, (x^{(m)}, y^{(m)})$. Here is the plot of them:
 
 ![dataset of linear regression](/public/image/dataset_lr.png)
 
-We can get $m$ and $b$ quite easily with these formulas:
+We can get $m$ and $b$ quite easily with these formulas (from **statistics**):
 
 $$
 \begin{align}
@@ -47,25 +47,59 @@ After this, we can draw the best fit line as blue line, which is also our model.
 -------------------------------------------------------------------------------
 # For the generalized case
 
-For the generalized case, $m$ is a vector. So we can not get it easily. Now assume the $h(x)$ is the **Hypothesis** model:
+For the generalized case, $m$ is a vector. So we cannot get it easily just with those formulas upper. Now assume the $h(x)$ is the **Hypothesis** model:
 
 $$
 h(x^{(i)})=m^Tx^{(i)}+b
 $$
 
-We can use a **cost function** -- **Mean Squared Error** (MSE) to evaludate this model:
+We can use a **cost function** -- **Mean Squared Error** (MSE) to evaluate this model:
 
 $$
 J(m, b) = \frac{1}{2n}\sum_{i=1}^n\left[h(x^{(i)})-y^{(i)}\right]^2
 $$
 
-$1/2n$ here is just for caculating convenice. What we need to do it to find the $m$ and $b$ to minimize the MSE wchich also means the line we made is as close as possible to those dataset points:
+$1/2n$ here is just for calculating convenience. What we need to do it to find the $m$ and $b$ to minimize the MSE which also means the line we made is as close as possible to those dataset points:
 
 $$
 \min_{m, b}J(m,b)
 $$
 
 Now the **Find unknown $m$ and $b$** becomes **Find the min value of $J$, and get $m$ and $b$**. This problem can be solved by **Gradient Descent** (which I want to give a another post to give some details).
+
+---
+
+# Evaluation Metrics
+
+Finally, after we get the value of $m$ and $b$, we will get the hypothesis model. Usually, we use **Coefficient of determination** (witch also calls $\text{R}^2$) to evaluate this model.
+
+Firstly, define the **residuals** as $e^{(i)} = y^{(i)} - h(x^{(i)})$, and **mean** of the data as $\overline{y}$, then define these sums of squares:
+
+- The total sum of squares (proportional to the variance of the data):
+
+  $$
+  SS_{\text{tot}} = \sum_i(y^{(i)} - \overline y)^2
+  $$
+
+- The regression sum of squares, also called the explained sum of squares:
+
+  $$
+  SS_{\text{reg}} = \sum_i(h(x^{(i)}) - \overline y)^2
+  $$
+
+- The sum of squares of residuals, also called the residual sum of squares:
+
+  $$
+  SS_{\text{res}} = \sum_i(y^{(i)} - h(x^{(i)}))^2 = \sum_i(e^{(i)})^2
+  $$
+
+lastly, define the coefficient of determination.
+
+$$
+\text{R}^2 = \frac{SS_{\text{reg}}}{SS_{\text{tot}}} = 1- \frac{SS_{\text{res}}}{SS_{\text{tot}}}
+$$
+
+>  The better the linear regression fits the data in comparison to the simple average, the closer the value of $\text{R}^2$ is to 1. 
 
 -------------------------------------------------------------------------------
 
@@ -111,6 +145,8 @@ clf = LinearRegression
 clf.fit(X_train, Y_train)
 accuracy = clf.score(X_test, Y_test)
 ```
+
+The `clf.score` will return the value of coefficient of determination $\text{R}^2$.
 
 In fact, the data preprocess is quite important step, it includes data cleaning and feature selection.
 That's a big topic, so I want to make another post to give details.
