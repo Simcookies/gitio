@@ -31,6 +31,7 @@ plugins:
   - jekyll-toc
   - jekyll-paginate
   - jemoji
+  - jekyll-target-blank
 
 emoji:
   src: "https://github.githubassets.com/images/icons/"
