@@ -10,8 +10,8 @@ permalink: /wiki/screen
 |Commands|Contents|
 |--------|--------|
 |screen|start a new session|
-|screen -t name|start a new session with a name|
-|screen [commands]|start a new session with implement commond|
+|screen -S name|start a new session with a name|
+|screen -X [commands]|start a new session with implement command|
 
 -------------------------------------------------------------------------------
 
@@ -29,10 +29,10 @@ Press `Ctrl + a` can enter **Command mode**, and then input command:
 |`n` or `Space`|Switch to the next window.|
 |`p` or `Backspace`|Switch to the previous windows.|
 |`0` or other number|Switch to window of specified number.|
-|`Ctrl + a`|Swith to the last used window.|
-|`Shift + a`|Set title of window.|
+|`Ctrl + a`|Switch to the last used window.|
+|`A`|Set title of window.|
 |`"`|Display the list of windows, and you can select window with `Enter`|
-|`w`|Dispaly the list of windows at the bottom of windows.|
+|`w`|Display the list of windows at the bottom of windows.|
 
 ### Copy mode
 
