@@ -222,7 +222,7 @@
             }
         }
 
-        .search {
+        .search-input {
             width: 100%;
             font-size: 16px;
             background-image:url('/public/image/searchicon.png');
@@ -232,6 +232,26 @@
             border: none;
             padding: 8px 8px 8px 30px;
             box-sizing: border-box;
+        }
+
+        .search-result {
+            position: absolute;
+            width: 100%;
+            text-align: left;
+            margin-top: 2px;
+            z-index: 999;
+            padding-right: 22px;
+            box-sizing: border-box;
+
+            div {
+                background-color: #FFF;
+                box-shadow: 10px 10px 10px #CCC, -10px 10px 10px #CCC;
+                border-radius: 0 0 8px 8px;
+
+                #results-container {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .category-list {

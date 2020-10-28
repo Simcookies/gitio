@@ -2,9 +2,19 @@
 
   <!-- Search -->
   <div class="col">
-    <input type="text" id="search-input" class="search" size="30" placeholder="Search" >
-    <br/>
-    <div id="results-container"></div>
+    <input type="text" id="search-input" class="search-input" size="30" placeholder="Search" >
+    <div class="search-result">
+      <div>
+        <ul id="results-container"></ul>
+      </div>
+    </div>
+    <script>
+      var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json'
+      })
+    </script>
   </div>
 
   <!-- Categories -->
