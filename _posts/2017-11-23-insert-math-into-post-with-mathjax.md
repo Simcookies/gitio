@@ -18,6 +18,12 @@ Add the script below into every page (or add it into template page "default.html
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```
 
+> This CDN has been retired, so I changed it to cdnjs.cloudflare.com:
+>
+> ```html
+> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+> ```
+
 ## Use redcarpet or karmdown as Markdown compiler[^footnote]
 
 Set it in `_config.yml` file:
@@ -36,7 +42,9 @@ $$ E = mc^2 $$
 
 You can get:
 
-$$E=mc^2$$
+$$
+E=mc^2
+$$
 
 `\\( \alpha\times\beta\times\gamma \\)` can get \\(\alpha\times\beta\times\gamma\\)
 

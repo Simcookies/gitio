@@ -2,29 +2,38 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
   <link rel="stylesheet" href="/public/css/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css"
+        integrity="sha512-EaaldggZt4DPKMYBa143vxXQqLq5LE29DG/0OoVenoyxDrAScYrcYcHIuxYO9YNTIQMgD8c8gIUU8FQw7WpXSQ=="
+        crossorigin="anonymous" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script src="https://unpkg.com/simple-jekyll-search@1.5.0/dest/simple-jekyll-search.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+          integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+          integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.12/simple-jekyll-search.min.js"
+          integrity="sha512-APy7Ff/y4pdIHleqiTMcRZ8Wu6tjfqhJpgAcaCvTuFQPj/G+/A5u0uZi/DkfkuLQ6FeFmDJgh/zl0y3If/VUyA=="
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+          integrity="sha512-Fv0JVzxvrWFLhiUP8wZYR6VwBZQt0XqB9MhHZE+12lObqIDzg3LOJcCCiRy6g4MCX/MlG+R9IRCWZAHjo9iBgw=="
+          crossorigin="anonymous"></script>
   <script type="text/x-mathjax-config">
-   MathJax.Hub.Config({
-       showProcessingMessages: false,
-       messageStyle: "none",
-       jax: ["input/TeX", "output/HTML-CSS"],
-       tex2jax: {
-           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-           displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-       }
-   });
+    MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+      }
+    });
   </script>
   <script src="/public/script/main.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
 </head>
