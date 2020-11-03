@@ -4,7 +4,6 @@ date: 2020-06-27 23:21:01 +0900
 category: blog
 tags: typora
 toc: false
-typora-root-url: ../
 ---
 
 一直使用 Markdown 编辑器 [Typora](https://typora.io/), 因为除了最基本的 Markdown 语法之外, 他还非常好地支持了 LaTex 公式以及 Mermaid 图表库. 但是之前一直有些在意的地方就是 Typora 的图片存放位置的问题. 之前的版本支持复制到当前文件夹或者其他指定文件夹, 但是这样就导致了, 每次同步或者拷贝某一个 md 文档的时候, 要带着这个图片文件夹一起"跑", 感觉总是怪怪的.

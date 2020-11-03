@@ -2,7 +2,6 @@
 title: "Network Studying Note 2"
 category: basics
 tags: internet
-typora-root-url: ../
 ---
 
 In the post of [Network Studying Note 1](/2017/03/19/network_studying_note_1), I took notes about the history of Internet and Internet Protocol Suite, especially, the TCP/IP Protocol. TCP/IP contains four layers of Application, Transport, Network and Network Interface. During transmission from layer to layer, top-down is called **Encapsulation** and button-up is called **Decapsulation**. In this post, I will write about the Encapsulations of last three layers and also includes about Three-way-Handshake.
@@ -21,7 +20,7 @@ The best-known transport protocol of TCP/IP is the [Transmission Control Protoco
 
 TCP provides reliable, ordered, and error-checked delivery of a stream of octets between applications running on hosts communicating over an IP network. Major Internet applications such as the WWW, email, remote administration, and file transfer rely on TCP. This picture shows the segment structure of TCP.
 
-![tcp_segment](/public/image/tcp_segment.png)
+![tcp_segment](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102143331.png)
 
 The most used bits are:
 
@@ -44,7 +43,7 @@ The most used bits are:
 
 UDP provides checksums for data integrity and port numbers for addressing different functions at the source and destination of the datagram. UDP is different with TCP without having no handshaking dialogues. This picture shows the segment structure of UDP.
 
-![udp_segment](/public/image/udp_segment.png)
+![udp_segment](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102143500.png)
 
 ## Handshaking
 
@@ -65,7 +64,7 @@ On the other hand, UDP has no handshaking. The teacher just says what he wants t
 
 How to transmit data with four layers? For UDP, the data of Application will be sent to Transport layer, and it adds UDP header in the front of data and sends to next Internet layer. Internet layer will add IP header in the front of that data and send to Data Link layer. Data Link layer add a Frame header in the front of data and add Frame footer in the behind of data. Finally, it sends the frame by physical signals. Here is the picture.
 
-![encapsulation](/public/image/encapsulation.png)
+![encapsulation](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102143533.png)
 
 Decapsulation has opposite steps of encapsulation.
 

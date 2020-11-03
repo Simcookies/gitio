@@ -2,7 +2,6 @@
 title: "Network Studying Note 1"
 category: basics
 tags: internet
-typora-root-url: ../
 ---
 
 There are some basic pieces of knowledge for programmers, C, Data Structure and Algorithm, Network, Operation System. So it's time to learning about them deeply. This blog is about my learning note of Network. It includes the history of Internet, theory, and application in Linux. If I want to know a new technology, I will first be interested in its history. Knowing the history of some tech will help me to understand why this tech is necessary and why it's fixtures work like this. So let me begin with history.
@@ -41,7 +40,7 @@ Open Systems Interconnection model ([OSI model][OSI]) partitions a communication
 
 The higher layer will package its data with a header at beginning of itself, and then send the package to next layer. This operation will be repeated and host device sends packaged data by physical line finally:
 
-![OSI model](/public/image/osi_layers.gif)
+![OSI model](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102143100.gif)
 
 OSI model does not provide some methods which can be realized, just gives some concepts. So it is not a standard but a concept framework which can be referred when createing a new standard. TCP/IP is such an instance.
 
@@ -49,7 +48,7 @@ OSI model does not provide some methods which can be realized, just gives some c
 
 [TCP/IP][tcp_ip] is a quite successful protocol, so it was used to replace NCP in ARPANET. There are two reasons. First, it is easier than OSI model because it just has four layers. Second, it can support so many protocols at low layers (Physical layer and Data link layer in OSI model), include Ethernet, Token-Ring, FDDI, PPP, ATM and so on. We can think TCP/IP model is an easier version of OSI model. Here is their relationship and the most used protocols and servers:
 
-![TCP/IP protocol suite](/public/image/tcp_ip_structure.png)
+![TCP/IP protocol suite](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102143145.png)
 
 As we know, TCP/IP is most used in fact. Just like OSI model, communication just exists between the same layer, higher will make header or footer to the data package and send it to the lower layer. The receiver host will make inverse operations to get final data. Understanding about these processes is important, and then it's time to understand every layer, but this post is just until here. I will go on with a new one. >= =<
 

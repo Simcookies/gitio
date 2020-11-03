@@ -3,7 +3,6 @@ title: "'Web Full-stack develop reference'"
 date: 2017-12-02 15:49:44 +0900
 category: basics
 tags: ruby python server
-typora-root-url: ../
 ---
 
 I finished reading the book of *[Web Full-stack Develop Reference](https://www.gitbook.com/book/coin8086/getfullstack/details)* at one weekend[^1]. As writing in the book, it focuses on the principles, general methods and tools of Web developing, not a specific programming language. The first half of the book's content is mainly introduced the basic knowledge of the Web includes the three elements of the web page elements -- HTML, CSS, JavaScript, so I just looked through it. I focused on reading the third chapter -- Programming Languages and Technologies. Besides, I made some others related researches about it and write a new post as below. (It's terriable to write in English:joy:)
@@ -58,7 +57,7 @@ I was vague about this concept before, but I got a rough outline after reading t
 
 If the site's traffic is not a lot, we can put the server directly on the network. Here is an instance:
 
-![basic instance](/public/image/basic_web_server.png)
+![basic instance](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102143913.png)
 
 The web server here may be Apache HTTP Server, Nginx, Microsoft's IIS and so on; dedicated Servlet which I said above, it just provides servers for Java; and the web server embedded in Node.js.
 
@@ -77,7 +76,7 @@ Nginx or Apache is the load balancer and also the web server, which responds to 
 
 Passenger can also manage the number of Rails processes, life cycles, request queues and so on. This fig can help you to understand the relationship between them.
 
-![server analysis](/public/image/server_analysis.png)
+![server analysis](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144000.png)
 
 -------------------------------------------------------------------------------
 

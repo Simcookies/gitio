@@ -4,7 +4,6 @@ date: 2018-09-21 14:53:00 +09000
 category: machine learning
 tags: algorithm formula
 toc: true
-typora-root-url: ../
 ---
 
 **Regression** is one class of problems in Machine Learning. Linear Regression is a basic one class of problems of Regression. I want to write a note about the Linear Regression in this post as the beginning of Machine Learning series.
@@ -15,7 +14,6 @@ typora-root-url: ../
 Regression problems want to find the relationship between the input variables and output variables. The *Regression* was used from a 19th-Century scientist.
 *Linear Regression* is most basic problems of Regression. We want to make a model to describe the relationship between input and output.
 So let's assume the input variables are $x_1, x_2, \dots , x_n$, and the output variable is $y$. This formula shows the linear relationship between them:
-
 $$
 y=m_1x_1+m_2x_2 + \dots+m_nx_n+b=m^Tx+b
 $$
@@ -29,7 +27,7 @@ For the 2-dimension (one input variable $x$ with one output variable $y$), we ca
 
 Now, we have one dataset with $(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), \dots, (x^{(m)}, y^{(m)})$. Here is the plot of them:
 
-![dataset of linear regression](/public/image/dataset_lr.png)
+![dataset of linear regression](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144249.png)
 
 We can get $m$ and $b$ quite easily with these formulas (from **statistics**):
 
@@ -42,7 +40,7 @@ $$
 
 After this, we can draw the best fit line as blue line, which is also our model. According this line, we can make prediction of $x=40$ which plot as red point:
 
-![linear regression prediction](/public/image/dataset_lr_prediction.png)
+![linear regression prediction](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144312.png)
 
 -------------------------------------------------------------------------------
 # For the generalized case

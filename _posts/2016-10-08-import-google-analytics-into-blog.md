@@ -3,7 +3,6 @@ title: "Import Google Analytics into Blog"
 date: 2016-10-08 09:20:00 +900
 category: blog
 tags: jekyll
-typora-root-url: ../
 ---
 
 [Google Analytics](https://en.wikipedia.org/wiki/Google_Analytics) is a freemium web analytics service offered by Google that tracks and reports website traffic. It is now the most widely used web analytics service on the Internet. You can get many information with Google analytic. For example, where is the user who visited you blog from, how long he stay at your pages and so on.
@@ -16,7 +15,7 @@ Firstly, we need to sign up a new Google Analytic account, or just use google ac
 
 And then input your ID and website, after it you can get `Tracking ID` and `Tracking Code`. You just need to copy and paste this JavaScript code into every webpage you want to track. Or if you miss that guide page, you also can find this code at google analytics pages here:
 
-![tracking_code](/public/image/tracking_code.jpg)
+![20201102142913](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102142913.jpg)
 
 -------------------------------------------------------------------------------
 

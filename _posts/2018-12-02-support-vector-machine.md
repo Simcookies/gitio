@@ -17,11 +17,11 @@ SVM is a kind of supervised learning method, it has good performance for classif
 
 First, let's say we have two types of data, one positive type and one negative type. Features have two dimensional data: $\vec{x} = (x_1, x_2)$, which can be plotted like below (Orange for positive data and blue for negative data):
 
-![SVM original dataset](/public/image/svm_original_data.png)
+![SVM original dataset](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144404.png)
 
 Now we want to draw a line to separate the two types of data. There are three lines to choose from below.
 
-![SVM with different classfication lines](/public/image/svm_with_3_lines.png)
+![SVM with different classfication lines](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144443.png)
 
 Obviously, the middle (b) is the best way to separate the data. So how can we count the "most able to" separate the data? We can assume a hyperplane which divide dataset into two classes. And this plane has as longer distance as possiable to all the two kinds of data. We call it **separating hyperplane **(or decision boundray). Equation for hyperplane (here is the line (b) in the figure):
 $$
@@ -54,7 +54,7 @@ $$
 
 Here is another example (Red for positive and blue for negative).  The two gray lines are the margin.
 
-![svm_margin](/public/image/svm_margin.png)
+![svm_margin](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144506.png)
 
 If $y_i$ presents the class of $i$-th piece of data, 1 for positive and -1 for negitive, then the two equations can be written into one:
 $$

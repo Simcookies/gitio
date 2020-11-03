@@ -3,7 +3,6 @@ title: "Draw UML with PlantUML in Atom"
 date: 2018-05-05 14:23:16 +0900
 category: tool
 tags: plantUML atom
-typora-root-url: ../
 ---
 
 I want to use UML to help me understanding how Jekyll works, so I found [PlantUML](http://plantuml.com/). It's an open source tool which can draw UML pictures quickly. In this post, I will config PlantUML into [Atom](https://atom.io/).
@@ -44,7 +43,7 @@ You can install these two packages with `apm` or directly install them in Atom G
 
 After installation, plantuml-preview needs some configurations.
 
-![setting_of_plantuml](/public/image/setting_of_plantuml.png)
+![setting_of_plantuml](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144103.png)
 
 - **Graphviz Dot Executable**: The path of dot which you get it by `which dot`.
 - **Additional PlantUML Arguments**: It's `-jar` with default value.
@@ -65,7 +64,8 @@ Alice <-- Bob: another authentication Response
 ```
 
 The shortcut key `Ctrl + Option + p` can preview the UML diagrams.
-![demo_of_plantuml_in_atom](/public/image/demo_of_plantuml_in_atom.png)
+
+![demo_of_plantuml_in_atom](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201102144141.png)
 
 OK! It's done! Enjoy it~ :tada:
 
