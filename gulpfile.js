@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var minifyHTML = require('gulp-htmlmin');
 var changedInPlace = require('gulp-changed-in-place');
 var jsonminify = require('gulp-jsonminify');
+var replace = require('gulp-replace');
 
 const DEST = './_site';
 const HTML_PATH = './_site/**/*.html';
@@ -19,4 +20,13 @@ gulp.task('minifyJSON', function() {
     .pipe(changedInPlace({firstPass: true}))
     .pipe(jsonminify())
     .pipe(gulp.dest(DEST));
-})
+});
+
+gulp.task('mermaidStyle', function() {
+  return gulp.src(HTML_PATH)
+    .pipe(changedInPlace({firstPass: true}))
+    .pipe(
+      replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/g,
+              '<div class="mermaid">$1</div>'))
+    .pipe(gulp.dest(DEST))
+});

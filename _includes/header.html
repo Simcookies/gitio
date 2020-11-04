@@ -6,11 +6,10 @@
 
     <span class="menu-icon" id="menu-icon">
       <span class="fa-stack fa-lg">
-	<i class="fa fa-square-o fa-stack-2x"></i>
-	<i class="fa fa-bars fa-stack-1x"></i>
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-bars fa-stack-1x"></i>
       </span>
     </span>
-    
     <nav class="site-nav">
       <div class="trigger">
         {% for my_page in site.pages %}
@@ -18,12 +17,11 @@
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
-	  
-	  <a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">Feeds</a>
-	  <a class="page-link" href="https://github.com/simcookies/gitio" target="_blank">
-	    <i class="fa fa-github-alt fa-lg"></i>
-	    Repositories
-	  </a>
+          <a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">Feeds</a>
+          <a class="page-link" href="https://github.com/simcookies/gitio" target="_blank">
+            <i class="fa fa-github-alt fa-lg"></i>
+            Repositories
+          </a>
       </div>
     </nav>
 
