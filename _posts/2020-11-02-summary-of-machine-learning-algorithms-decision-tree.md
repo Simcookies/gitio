@@ -1,8 +1,8 @@
 ---
 title: "机器学习算法系列 - 决策树(序)"
 date: 2020-11-02 14:50:09 +0900
-category:
-tags:
+category: machine learning
+tags: algorithm formula
 typora-root-url: ../
 ---
 
