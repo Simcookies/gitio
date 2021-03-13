@@ -116,7 +116,13 @@ $$
 因此, 需要一个相对的值来进行校正, 这就导入了**信息增益比**:
 
 $$
-g_R(D,A)=\frac{g(D,A)}{H(D)}\notag
+g_R(D,A)=\frac{g(D,A)}{H_A(D)}\notag
+$$
+
+$H_A(D)$ 为特征 $A$ 的属性熵, 也叫特征熵:
+
+$$
+H_A(D) = -\sum\limits_{i=1}^{n}\frac{|D_i|}{|D|}\log\frac{|D_i|}{|D|}\notag
 $$
 
 ### 基尼指数 (Gini Index)
