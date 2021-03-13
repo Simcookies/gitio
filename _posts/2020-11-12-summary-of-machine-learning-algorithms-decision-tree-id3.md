@@ -337,4 +337,4 @@ Image(graph.create_png())
 
 ![决策树](https://raw.githubusercontent.com/simcookies/image-host/master/imgs/20201113191853.png)
 
-可以看出 scikit-learn 得到的树和上面 scratch 得到树是一样的. 到这里, 关于 ID3 简单的实现就结束了.
+可以看出 scikit-learn 得到的树和上面 scratch 得到树是一样的. 最终版的代码在这里 [Github](https://github.com/simcookies/algorithm_implement/blob/master/ml/Decision_Tree_ID3_scratch.ipynb)。到这里, 关于 ID3 简单的实现就结束了.
